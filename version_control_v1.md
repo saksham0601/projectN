@@ -1,33 +1,42 @@
-# MMM Version Control
+# Might Make Millions (MMM)
 
-The objective of this document is to set the specifications for the version control that MMM is going to follow for project N. For this, Github is going to be used. 
+## Introduction:
+
+To maintain a consistent development environment and streamline collaborative efforts, MMM has established a version control guideline for Project N. The platform of choice for this is GitHub, known for its robust version control capabilities and ease of collaboration.
 
 ## Git structure
 
-Project N repository is going to have the following structure:
+ProjectN repository is going to have the following structure:
 
 ### Main branch:
 
-This going to be the stable ready to go version of the product.
+Represents the production-ready, stable version of the software.
 
-The versioning naming is going to be set by the significant of the update that is going to be made. This scheme is going to allow setting milestones for the version to change but still allow for minor changes to be realize before the major updates. 
+Version naming will be dictated by the significance of the update. This scheme establishes clear milestones for major updates while allowing for incremental improvements in between.
 
-1. Example: Project N v 1.0 -> Project N 1.1 -> Project 2.0 
+Example: ProjectN v1.0 → ProjectN v1.1 → Project N v2.0
 
-Only one person is in charge to push the changes from Dev to the main branch. This person in charge of pushing is going to rotate every week.
+Pushing to the main branch is a responsibility designated to one person, with this role rotating on a weekly basis to ensure diversity and shared understanding among team members.
 
 ### Dev branch
 
-This branch is going to be the one is going to be forked to work on for the different features that are ion current development. This includes main features or experimental features.
+Acts as the central hub for all ongoing development, including core and experimental features.
+Developers should fork from the Dev branch to work on specific tasks or features.
 
 ## Preventing Conflicts when Pushing
 
-To prevent conflicts when a team member is going to push from their own cloned repository the next steps are to be followed:
+Conflicts can disrupt the development workflow and introduce bugs. To manage and minimize this, the following procedures must be observed:
 
-1. When ready to push sent a message through the main MMM communication channel (Discord).
-2. After finishing pushing, send a message on the same channel that you have finish pushing. 
+1. Pre-Push Notification: Before initiating a push, announce your intent on the primary MMM communication channel (Discord).
+
+2. Post-Push Notification: Once you've completed the push, promptly inform the team on the same channel.
 
 Rules:
 
-1. If there is a pushing message on the MMM communication channel you should not push until the "finish pushing" message is received.
-2. When you send the push notification message, there is a spam of not more than 5 minutes to actually push and send the finished pushing message.
+1. Respect the Push Notification: If a push notification appears in the channel, refrain from pushing to the repo until a "finished pushing" message is seen.
+
+2. Timeliness: Ensure that after sending a push notification, the actual push and subsequent "finished pushing" message occurs within a 5-minute window. This prevents prolonged wait times and ensures an efficient workflow.
+
+## Conclusion
+
+By adhering to these guidelines, MMM aims to foster a harmonious, efficient, and productive development environment for Project N. All team members are urged to stay updated with these specifications and to ensure their adherence throughout the project's lifecycle.
