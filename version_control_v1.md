@@ -24,7 +24,7 @@ This branch is going to be the one is going to be forked to work on for the diff
 
 To prevent conflicts when a team member is going to push from their own cloned repository the next steps are to be followed:
 
-1. When ready to push sent a message through the main MM communication channel (Discord).
+1. When ready to push sent a message through the main MMM communication channel (Discord).
 2. After finishing pushing, send a message on the same channel that you have finish pushing. 
 
 Rules:
