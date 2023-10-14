@@ -1,4 +1,4 @@
-# Might Make Millions (MMM)
+# Version Control MMM
 
 ## Introduction:
 
