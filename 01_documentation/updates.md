@@ -22,13 +22,13 @@ Yulia Anna Bobkova - Design Lead
 
 Saksham Singh Sohal - Programming Lead
 
-Santiago Daza - Design Research
+Santiago Daza - Designing/Programming
 
 Vladimir Zhelev - Tester/Programming
 
 ## Team Contact Information
 
-The new main contact for the team is Yulia Anna Bobkova yulia.anna.bobkova@gmail.com
+The new main contact for the team is Yulia Anna Bobkova, yulia.anna.bobkova@gmail.com
 
 ## Planned Meeting Times
 
