@@ -28,6 +28,10 @@ yulia.anna.bobkova@gmail.com
 
 ## Design Overview
     
+![level0](imgs/level0.jpg)
+
+The above represents the DFD Level 0. In this, the most basic interaction.
+
 Developers
 
 * Our team
@@ -52,10 +56,6 @@ User
 - formatting tools, user is given a set of text formatting tools to use 
 - blank page, user is given a blank page to put their output onto
 - settings, give the user customizability options for their account, ribbons, theme, view mode ect.
-
-# Please attach level-0 diagram here and delete this message!!
-
-The above represents the DFD Level 0. In this, the most basic interaction.
 
 ## Logical Design
 
