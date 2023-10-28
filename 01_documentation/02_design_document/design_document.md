@@ -118,7 +118,7 @@ Purpose: Manage knowledge-testing tools and quizzes.
 
 Functionality: Create, edit, and take quizzes based on notes. Track and display quiz results.
 
-![level1](imgs/level1.png)
+![level1](imgs/level1.jpg)
 
 The above represents the DFD Level 1. zooming into more detais;
 
@@ -131,7 +131,7 @@ The above represents the DFD Level 1. zooming into more detais;
 (The process between Interpreter and developer described in level 2 DFD)
 
 
-![level2](imgs/level2.png)
+![level2](imgs/level2.jpg)
 
 This diagram explains the role of the interpreter based on the conditions that apply to the input!
 
