@@ -118,7 +118,7 @@ Purpose: Manage knowledge-testing tools and quizzes.
 
 Functionality: Create, edit, and take quizzes based on notes. Track and display quiz results.
 
-![Landing](imgs/level1.png)
+![level1](imgs/level1.png)
 
 The above represents the DFD Level 1. zooming into more detais;
 
@@ -131,7 +131,7 @@ The above represents the DFD Level 1. zooming into more detais;
 (The process between Interpreter and developer described in level 2 DFD)
 
 
-![Landing](imgs/level2.png)
+![level2](imgs/level2.png)
 
 This diagram explains the role of the interpreter based on the conditions that apply to the input!
 
@@ -140,7 +140,7 @@ Beginning of the processing data, analytical stage, prepare to explain the level
 ### Product Feature Subsystem, Note-Taking Subsystem, Inupt-output streams
 
 
-![Landing](imgs/level_2-1.png)
+![level_2-1](imgs/level_2-1.png)
 
 RenderThis diagram provides in-depth details about data processing, serving as an extension of the Level 2 DFD. Data processing is organized around three chosen classes:
 
