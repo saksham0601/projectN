@@ -20,11 +20,9 @@ Santiago Daza
 
 Vladimir Zhelev
 
-Mohammad Sheikho Al Jasen
-
 ### Primary contact:
 
-Mohammad Sheikho Al Jasen [msheikhaljasem20@hotmail.com](mailto:msheikhaljasem20@hotmail.com)
+Yulia Anna Bobkova yulia.anna.bobkova@gmail.com
 
 ## Product Overview:
 
@@ -145,7 +143,7 @@ Features: This is the file dropdown menu which has many standard file options as
 Features: The insert dropdown menu allows the user to use this app for more than just the plain text document features. Inserting a file or an image connects the user to what they are learning and
 
 ![flash-card-dropdown](imgs/flash_card.png)
-Features: This is the first sketch for Flashcard drop down menu. It will allow the user to create a new flash card set and, if wanted, to visualize it on a split screen.
+Features: This is the first sketch for Flashcard drop down menu. It will allow the user to create a new flash card set and, if wanted, to visualize it on a split scpepareen.
 
 ![quiz-dropdown](imgs/quiz_dropdown.png)
 Features: This is the first sketch for Quiz drop down menu. It will allow the user to create a new quiz set and, if wanted, to visualize it on a split screen.
