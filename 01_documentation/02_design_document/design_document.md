@@ -28,7 +28,7 @@ yulia.anna.bobkova@gmail.com
 
 ## Design Overview
     
-![level0](imgs/level0.jpg)
+![level0](imgs/level0.png)
 
 The above represents the DFD Level 0. In this, the most basic interaction.
 
