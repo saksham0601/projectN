@@ -14,18 +14,18 @@ function fontDown()
 
 function textBold()
 {
-    input = input.bold;
+    input.style.fontWeight = "bold";
 }
 
 function textItalic()
 {
-    input = input.italics;
+    input.style.fontStyle = "italic";
 }
 
 function saveFile()
 {
-    var output = document.getElementById("note").value;
+    let output = document.getElementById("note").value;
     
-    var blob = new Blob([output], {type: "text/plain;charset=utf-8"});
+    let blob = new Blob([output], {type: "text/plain;charset=utf-8"});
     saveAs(blob, "Note.txt");
 }
