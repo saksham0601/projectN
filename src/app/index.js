@@ -27,5 +27,5 @@ function saveFile()
     let output = document.getElementById("note").value;
     
     let blob = new Blob([output], {type: "text/plain;charset=utf-8"});
-    saveAs(blob, "Note.txt");
+    saveAs(blob, "Note.md");
 }
