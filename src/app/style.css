@@ -1,5 +1,5 @@
-#note {
+#textarea {
+    border: solid;
     width: 800px;
     height: 600px;
-    resize: none;
 }
