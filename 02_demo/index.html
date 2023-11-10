@@ -19,7 +19,7 @@
                     <li><button type="button" onclick = "saveFile();" id = "saveFile">Save As</button></li>
                     <li><button>Save Copy</button></li>
                     <li><button>New</button></li>
-                    <li><button>Open</button></li>
+                    <li><button onclick="document.getElementById('fileInput').click();">Open</button></li>
                     <li><button>Open Recent</button></li>
                     <li><button>Page Layout</button></li>
                     <li><button>Print</button></li>
@@ -46,19 +46,18 @@
         <textarea id="noteInput" placeholder="Start typing in Markdown..."></textarea>
         <div id="noteDisplay"></div>
     </div>
-
+    
+    <!-- used to choose a file from your pc which is then read by the open button -->
     <input type="file" id="fileInput" style="display: none;" onchange="readFile()" />
-    <button style="border: 0.03rem solid black; padding: 0 0.3rem; gap: 0 0.5rem;" onclick="document.getElementById('fileInput').click();">Choose and Read File</button>
 
     <button  style="border: 0.03rem solid black; padding: 0 0.3rem; gap: 0 0.5rem;" onclick="applyBold()">B</button>
     <button style="border: 0.03rem solid black; padding: 0 0.3rem; gap: 0 0.5rem;" onclick="applyItalic()">I</button>
     <button style="border: 0.03rem solid black; padding: 0 0.3rem; gap: 0 0.5rem;" onclick="applyUnderline()">U</button>
-    <button type="button" onclick = "saveFile();" id = "save_file">Save File</button>
-
+    
     <script src="01_scripts/text.js"></script>
     <script src="01_scripts/script.js"></script>
     <script src="01_scripts/fileSaver.js"></script>
-
+    
 </body>
 </html>
 
