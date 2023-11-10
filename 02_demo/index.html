@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Note Taking App</title>
-    <link rel="stylesheet" type="text/css" href="02_css/styles.css">
+    <link rel="stylesheet" type="text/css" href="02_css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dompurify@2/dist/purify.min.js"></script>
-
 </head>
-
 <body>
     <div id="app">
-        <textarea id="noteInput"></textarea>
-        <button id="saveButton">Save Note</button>
+        <textarea id="noteInput" placeholder="Start typing in Markdown..."></textarea>
         <div id="noteDisplay"></div>
-
-        <script src="01_scripts/text.js"></script>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="01_scripts/text.js"></script>
 </body>
-
 </html>
+

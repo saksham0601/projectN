@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const saveButton = document.getElementById('saveButton');
   const noteInput = document.getElementById('noteInput');
   const noteDisplay = document.getElementById('noteDisplay');
 
-  saveButton.addEventListener('click', function() {
+  // Render Markdown into HTML in real-time as the user types
+  noteInput.addEventListener('input', function() {
       const noteMarkdown = noteInput.value;
-      const noteHTML = marked.parse(noteMarkdown); // Parse the Markdown into HTML
+      const sanitizedMarkdown = DOMPurify.sanitize(noteMarkdown); // Sanitize the Markdown input
+      const noteHTML = marked.parse(sanitizedMarkdown); // Parse the sanitized Markdown into HTML
       noteDisplay.innerHTML = noteHTML; // Display the rendered HTML
   });
-}); 
+});
