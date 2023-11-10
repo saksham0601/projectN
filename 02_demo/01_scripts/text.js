@@ -27,19 +27,33 @@ function applyBold() {
 
 
 function applyItalic() {
+
   var selectedText = window.getSelection().toString();
   if (selectedText) {
+    if (selectedText.startsWith("*") && selectedText.endsWith("*")) {
+      var modifiedText = selectedText.substring(2, selectedText.length - 2);
+      replaceSelection(modifiedText);
+    }
+    else {
       var modifiedText = "*"+selectedText+"*";
       replaceSelection(modifiedText);
+    }
   }
+
 }
 
 function applyUnderline() {
   var selectedText = window.getSelection().toString();
   if (selectedText) {
+    if (selectedText.startsWith("_") && selectedText.endsWith("_")) {
+      var modifiedText = selectedText.substring(2, selectedText.length - 2);
+      replaceSelection(modifiedText);
+    }
+    else {
       var modifiedText = "_"+selectedText+"_";
       replaceSelection(modifiedText);
-  }
+    }
+  }  
 }
 
 function getSelectedText() {
