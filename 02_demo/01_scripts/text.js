@@ -1,16 +1,34 @@
-// Implementation of converting user input to markdown was generated with the use of AI
 document.addEventListener('DOMContentLoaded', () => {
   const noteInput = document.getElementById('noteInput');
   const noteDisplay = document.getElementById('noteDisplay');
 
+  // Custom renderer to handle ==highlighted text==
+  const renderer = new marked.Renderer();
+  const originalRenderer = renderer.paragraph;
+  renderer.paragraph = (text) => {
+    const highlighted = text.replace(/==([^==]+)==/g, '<mark>$1</mark>');
+    return originalRenderer.call(renderer, highlighted);
+  };
+
+  // Configure marked
+  marked.setOptions({
+    renderer, // Use the custom renderer
+    gfm: true,
+    tables: true,
+    breaks: true,
+    smartLists: true,
+    smartypants: true
+  });
+
   // Render Markdown into HTML in real-time as the user types
   noteInput.addEventListener('input', function() {
-      const noteMarkdown = noteInput.value;
-      const sanitizedMarkdown = DOMPurify.sanitize(noteMarkdown); // Sanitize the Markdown input
-      const noteHTML = marked.parse(sanitizedMarkdown); // Parse the sanitized Markdown into HTML
-      noteDisplay.innerHTML = noteHTML; // Display the rendered HTML
+    const noteMarkdown = noteInput.value;
+    const sanitizedMarkdown = DOMPurify.sanitize(noteMarkdown);
+    const noteHTML = marked.parse(sanitizedMarkdown);
+    noteDisplay.innerHTML = noteHTML;
   });
 });
+
 
 function applyBold() {
   var selectedText = window.getSelection().toString();
