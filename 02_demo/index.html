@@ -13,11 +13,19 @@
         <textarea id="noteInput" placeholder="Start typing in Markdown..."></textarea>
         <div id="noteDisplay"></div>
     </div>
+
+    <input type="file" id="fileInput" style="display: none;" onchange="readFile()" />
+    <button onclick="document.getElementById('fileInput').click();">Choose and Read File</button>
+
     <button onclick="applyBold()">B</button>
     <button onclick="applyItalic()">I</button>
     <button onclick="applyUnderline()">U</button>
+    <button type="button" onclick = "saveFile();" id = "save_file">Save File</button>
 
     <script src="01_scripts/text.js"></script>
+    <script src="01_scripts/script.js"></script>
+    <script src="01_scripts/fileSaver.js"></script>
+
 </body>
 </html>
 
