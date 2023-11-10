@@ -1,35 +1,35 @@
 #app {
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    max-width: 100%; /* Or the max width you prefer */
-    padding: 0.5rem 1rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%; /* Or the max width you prefer */
+  padding: 0.5rem 1rem;
 }
 
 textarea {
-    width: 48%;
-    min-height: 78vh;
-    padding: 10px;
-    font-size: 1em; /* Adjust font size as needed */
-    box-shadow: 0 0 10px #1C1C23;
-    outline: none;
-    border: none;
-    background-color:#31313f;
-    color: white;
-    border-radius: 1rem;
-    resize: none; /* Disable textarea resizing */
+  width: 48%;
+  min-height: 78vh;
+  padding: 10px;
+  font-size: 1em; /* Adjust font size as needed */
+  box-shadow: 0 0 10px #1C1C23;
+  outline: none;
+  border: none;
+  background-color: #31313f;
+  color: white;
+  border-radius: 1rem;
+  resize: none; /* Disable textarea resizing */
 }
 
 #noteDisplay {
-    width: 48%;
-    min-height: 78vh;
-    padding: 10px;
-    box-shadow: 0 0 10px #1C1C23;
-    background-color: #31313f;
-    overflow-y: auto; /* Adds a scrollbar if content is too long */
-    font-size: 1em; /* Adjust font size as needed */
-    white-space: pre-wrap; /* Keeps the line breaks and spacing */
-    border-radius: 1rem;
+  width: 48%;
+  min-height: 78vh;
+  padding: 10px;
+  box-shadow: 0 0 10px #1C1C23;
+  background-color: #31313f;
+  overflow-y: auto; /* Adds a scrollbar if content is too long */
+  font-size: 1em; /* Adjust font size as needed */
+  white-space: pre-wrap; /* Keeps the line breaks and spacing */
+  border-radius: 1rem;
 }
 
 /* color variables*/
@@ -63,6 +63,7 @@ body {
   width: 100rem;
   height: 60px;
   margin: -2rem;
+  opacity: 90%;
   box-shadow: 0 0 10px #1C1C23;
 }
 .nav__list {
@@ -73,7 +74,22 @@ body {
   gap: 1rem;
   padding: 0 1rem;
 }
+.nav__listlogo {
+  list-style: none;
+  margin-right: auto;
+  cursor: pointer;
+  /* svg{
 
+      width: 2.5rem;
+      transition: fill 250ms ease-in;
+      &:hover, &:focus{
+          fix the hover states for logo lol aka fill
+          fill: white;
+      }
+
+
+  }*/
+}
 .nav__listitem {
   list-style: none;
   position: relative;
