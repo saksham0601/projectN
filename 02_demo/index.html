@@ -4,19 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="02_css/main.css">
+    <title>Note Taking App</title>
+    <link rel="stylesheet" type="text/css" href="02_css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2/dist/purify.min.js"></script>
+
 </head>
 
 <body>
+    <div id="app">
+        <textarea id="noteInput"></textarea>
+        <button id="saveButton">Save Note</button>
+        <div id="noteDisplay"></div>
 
-    <input type="text" id="textInput">
-    <button type="button" id="saveBtn">save</button>
-    <button type="button" id="boldBtn">B</button>
-    <button type="button" id="italicsBtn">I</button>
-    <button type="button" id="underlineBtn">U</button>
+        <script src="01_scripts/text.js"></script>
+    </div>
 
-    <script src="01_scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>
 
 </html>
