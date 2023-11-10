@@ -2,9 +2,12 @@ function saveFile()
 {
     let output = document.getElementById("noteInput").value;
     let file_name = prompt("Please enter the file name", "MyNote");
-    
-    let blob = new Blob([output], {type: "text/plain;charset=utf-8"});
-    saveAs(blob, file_name + ".md");
+
+    if (file_name)
+    {
+        let blob = new Blob([output], {type: "text/plain;charset=utf-8"});
+        saveAs(blob, file_name + ".md");
+    }
 }
 
 function openFile() {

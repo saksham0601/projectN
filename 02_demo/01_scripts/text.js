@@ -61,3 +61,4 @@ function replaceSelection(selection) {
   // Set the value of the textBox with the selected text removed
   textBox.value = textBefore + selection + textAfter;
 }
+
