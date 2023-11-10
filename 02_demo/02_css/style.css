@@ -2,14 +2,13 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
-    max-width: 1200px; /* Or the max width you prefer */
-    padding: 10px;
+    max-width: 100%; /* Or the max width you prefer */
+    padding: 0.5rem 1rem;
 }
 
 textarea {
-    width: 45%;
+    width: 48%;
     height: 400px; /* Or the height you prefer */
-    margin-right: 10px;
     padding: 10px;
     font-size: 1em; /* Adjust font size as needed */
     box-shadow: 0 0 10px #1C1C23;
@@ -63,7 +62,7 @@ body {
   width: 100rem;
   height: 60px;
   margin: -2rem;
-  border-bottom: 0.03rem solid black;
+  box-shadow: 0 0 10px #1C1C23;
 }
 .nav__list {
   display: flex;
@@ -73,22 +72,7 @@ body {
   gap: 1rem;
   padding: 0 1rem;
 }
-.nav__listlogo {
-  list-style: none;
-  margin-right: auto;
-  cursor: pointer;
-  /* svg{
 
-      width: 2.5rem;
-      transition: fill 250ms ease-in;
-      &:hover, &:focus{
-          fix the hover states for logo lol aka fill
-          fill: white;
-      }
-
-
-  }*/
-}
 .nav__listitem {
   list-style: none;
   position: relative;
