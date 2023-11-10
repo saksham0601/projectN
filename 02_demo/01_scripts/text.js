@@ -1,3 +1,4 @@
+// Implementation of converting user input to markdown was generated with the use of AI
 document.addEventListener('DOMContentLoaded', () => {
   const noteInput = document.getElementById('noteInput');
   const noteDisplay = document.getElementById('noteDisplay');
