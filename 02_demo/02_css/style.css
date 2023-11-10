@@ -21,7 +21,7 @@ textarea {
 }
 
 #noteDisplay {
-    width: 45%;
+    width: 48%;
     height: 400px; /* To match the textarea height */
     padding: 10px;
     box-shadow: 0 0 10px #1C1C23;
