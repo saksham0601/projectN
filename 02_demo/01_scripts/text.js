@@ -25,7 +25,6 @@ function applyBold() {
   }  
 }
 
-
 function applyItalic() {
 
   var selectedText = window.getSelection().toString();
