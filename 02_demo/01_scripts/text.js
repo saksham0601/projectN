@@ -14,10 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
 function applyBold() {
   var selectedText = window.getSelection().toString();
   if (selectedText) {
+    if (selectedText.startsWith("**") && selectedText.endsWith("**")) {
+      var modifiedText = selectedText.substring(2, selectedText.length - 2);
+      replaceSelection(modifiedText);
+    }
+    else {
       var modifiedText = "**"+selectedText+"**";
       replaceSelection(modifiedText);
-  }
+    }
+  }  
 }
+
 
 function applyItalic() {
   var selectedText = window.getSelection().toString();
