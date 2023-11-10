@@ -8,7 +8,7 @@
 
 textarea {
     width: 48%;
-    height: 400px; /* Or the height you prefer */
+    min-height: 78vh;
     padding: 10px;
     font-size: 1em; /* Adjust font size as needed */
     box-shadow: 0 0 10px #1C1C23;
@@ -22,7 +22,7 @@ textarea {
 
 #noteDisplay {
     width: 48%;
-    height: 400px; /* To match the textarea height */
+    min-height: 78vh;
     padding: 10px;
     box-shadow: 0 0 10px #1C1C23;
     background-color: #31313f;
@@ -59,6 +59,7 @@ body {
 
 .nav {
   position: fixed;
+  background-color: #31313f;
   width: 100rem;
   height: 60px;
   margin: -2rem;
