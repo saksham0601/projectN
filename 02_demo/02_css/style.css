@@ -17,6 +17,7 @@ textarea {
     border: none;
     background-color:#31313f;
     color: white;
+    border-radius: 1rem;
 }
 
 #noteDisplay {
@@ -28,6 +29,7 @@ textarea {
     overflow-y: auto; /* Adds a scrollbar if content is too long */
     font-size: 1em; /* Adjust font size as needed */
     white-space: pre-wrap; /* Keeps the line breaks and spacing */
+    border-radius: 1rem;
 }
 
 /* color variables*/
