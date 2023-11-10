@@ -8,21 +8,23 @@
 
 textarea {
     width: 45%;
-    height: 300px; /* Or the height you prefer */
+    height: 400px; /* Or the height you prefer */
     margin-right: 10px;
     padding: 10px;
     font-size: 1em; /* Adjust font size as needed */
-    border: 1px solid #ddd;
+    box-shadow: 0 0 10px #1C1C23;
     outline: none;
+    border: none;
+    background-color:#31313f;
+    color: white;
 }
 
 #noteDisplay {
     width: 45%;
-    height: 300px; /* To match the textarea height */
+    height: 400px; /* To match the textarea height */
     padding: 10px;
-    color: black;
-    border: 1px solid #ddd;
-    background-color: #f3f3f3;
+    box-shadow: 0 0 10px #1C1C23;
+    background-color: #31313f;
     overflow-y: auto; /* Adds a scrollbar if content is too long */
     font-size: 1em; /* Adjust font size as needed */
     white-space: pre-wrap; /* Keeps the line breaks and spacing */
