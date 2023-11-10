@@ -15,7 +15,7 @@ function applyBold() {
   var selectedText = window.getSelection().toString();
   if (selectedText) {
     if (selectedText.startsWith("**") && selectedText.endsWith("**")) {
-      var modifiedText = selectedText.substring(1, selectedText.length - 1);
+      var modifiedText = selectedText.substring(2, selectedText.length - 2);
       replaceSelection(modifiedText);
     }
     else {
@@ -45,7 +45,7 @@ function applyUnderline() {
   var selectedText = window.getSelection().toString();
   if (selectedText) {
     if (selectedText.startsWith("_") && selectedText.endsWith("_")) {
-      var modifiedText = selectedText.substring(2, selectedText.length - 2);
+      var modifiedText = selectedText.substring(1, selectedText.length - 1);
       replaceSelection(modifiedText);
     }
     else {
