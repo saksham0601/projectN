@@ -1,0 +1,142 @@
+#app {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%; /* Or the max width you prefer */
+  padding: 0.5rem 1rem;
+}
+
+textarea {
+  width: 48%;
+  min-height: 78vh;
+  padding: 10px;
+  font-size: 1em; /* Adjust font size as needed */
+  box-shadow: 0 0 10px #1C1C23;
+  outline: none;
+  border: none;
+  background-color: #31313f;
+  color: white;
+  border-radius: 1rem;
+  resize: none; /* Disable textarea resizing */
+}
+
+#noteDisplay {
+  width: 48%;
+  min-height: 78vh;
+  padding: 10px;
+  box-shadow: 0 0 10px #1C1C23;
+  background-color: #31313f;
+  overflow-y: auto; /* Adds a scrollbar if content is too long */
+  font-size: 1em; /* Adjust font size as needed */
+  white-space: pre-wrap; /* Keeps the line breaks and spacing */
+  border-radius: 1rem;
+}
+
+/* color variables*/
+/* border radius*/
+* *::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+}
+
+body {
+  /*find in google fonts later*/
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #31313f;
+  color: #ffffff;
+}
+
+.nav {
+  position: fixed;
+  background-color: #31313f;
+  width: 100rem;
+  height: 60px;
+  margin: -2rem;
+  opacity: 90%;
+  box-shadow: 0 0 10px #1C1C23;
+}
+.nav__list {
+  display: flex;
+  float: left;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+.nav__listlogo {
+  list-style: none;
+  margin-right: auto;
+  cursor: pointer;
+  /* svg{
+
+      width: 2.5rem;
+      transition: fill 250ms ease-in;
+      &:hover, &:focus{
+          fix the hover states for logo lol aka fill
+          fill: white;
+      }
+
+
+  }*/
+}
+.nav__listitem {
+  list-style: none;
+  position: relative;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  margin-right: auto;
+  /*pseudo elements*/
+}
+.nav__listitem::after {
+  content: "";
+  width: 0;
+  height: 0.03rem;
+  border-radius: 0.2rem;
+  position: absolute;
+  left: 1rem;
+  bottom: 0.8rem;
+  background-color: white;
+  transition: width 200ms ease-in-out;
+}
+.nav__listitem:hover::after, .nav__listitem:focus::after {
+  width: 80%;
+}
+.nav__listitem:hover ul, .nav__listitem:focus ul {
+  opacity: 1;
+  visibility: visible;
+}
+.nav__listitemdrop {
+  position: absolute;
+  top: 2.7rem;
+  left: 1rem;
+  box-shadow: 0 0 10px #1C1C23;
+  background-color: #383845;
+  width: 10rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease-in-out;
+}
+.nav__listitemdrop li {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  transition: #31313f 200ms ease-in-out;
+}
+.nav__listitemdrop li:hover, .nav__listitemdrop li:focus {
+  background-color: #31313D;
+}/*# sourceMappingURL=styles.css.map */

@@ -27,7 +27,7 @@ yulia.anna.bobkova@gmail.com
 - #### Under maintenance 
 
 ## Design Overview
-    
+
 ![level0](imgs/level0.png)
 
 The above represents the DFD Level 0. In this, the most basic interaction.
@@ -84,7 +84,7 @@ Purpose: Explore integration with cloud services for data storage and backup.
 
 Functionality: Allow users to access their data from different devices.
 
-- #### Search and indexing Subsytem:
+- #### Search and indexing Subsystem:
 
 Purpose: Provide quick retrieval of notes.
 
@@ -154,24 +154,24 @@ Each of these objects will encompass distinct features and functionality in alig
 
 ## Physical Design
 
-For most part we are using google standards for physical design of structure.
+For the most part, we are using Google standards for the physical design of the structure.
 
 ### Programming language(s) and any supporting tools to be used
 
-- JavaScript with the help of the framework Next.js as a supporting tool.
+- In the beginning phases of the projectN, Vanilla JavaScript will be used, aiming to integrate the next.js framework as the project progresses.
 - HTML
-- CSS
+- For the style we are using CSS with the extension Sassy CSS (SCSS).
 - An external server to host. 
 
 ### Directory and File Naming Structure to be Used Within the Code Repository
 
-Acording to Google Style, file names must be all lowercase and may include underscores (_) or dashes (-), but no additional punctuation.
+According to Google Style, file names must be all lowercase and may include underscores (_) or dashes (-), but no additional punctuation.
 
 ### File Structure
 
 #### 01_documentation
 
-This folder contains all necessary documentation as to functionality, standards and any other relevant information. 
+This folder contains all necessary documentation regarding functionality, standards and other relevant information. 
 
 #### 02_programm_projectN
 
@@ -207,5 +207,4 @@ This folder is split in two, there is "helpers" & "features". "features" has sub
 - publicly accessible data types and constants
 - publicly callable function names, return types, parameter lists
 - class names, public field names/types, public method names, parameters, return types
-
 
