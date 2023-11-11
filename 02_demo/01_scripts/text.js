@@ -1,3 +1,4 @@
+// Markdown implementation was done with the help of ChatGPT
 document.addEventListener('DOMContentLoaded', () => {
   const noteInput = document.getElementById('noteInput');
   const noteDisplay = document.getElementById('noteDisplay');
@@ -29,17 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
 function applyBold() {
   var selectedText = window.getSelection().toString();
   if (selectedText) {
     if (selectedText.startsWith("**") && selectedText.endsWith("**")) {
-      var modifiedText = selectedText.substring(2, selectedText.length - 2);
-      replaceSelection(modifiedText);
+      var formattedText = selectedText.substring(2, selectedText.length - 2);
+      replaceSelection(formattedText);
     }
     else {
-      var modifiedText = "**"+selectedText+"**";
-      replaceSelection(modifiedText);
+      var formattedText = "**"+selectedText+"**";
+      replaceSelection(formattedText);
     }
   }  
 }
@@ -49,31 +49,33 @@ function applyItalic() {
   var selectedText = window.getSelection().toString();
   if (selectedText) {
     if (selectedText.startsWith("*") && selectedText.endsWith("*")) {
-      var modifiedText = selectedText.substring(1, selectedText.length - 1);
-      replaceSelection(modifiedText);
+      var formattedText = selectedText.substring(1, selectedText.length - 1);
+      replaceSelection(formattedText);
     }
     else {
-      var modifiedText = "*"+selectedText+"*";
-      replaceSelection(modifiedText);
+      var formattedText = "*"+selectedText+"*";
+      replaceSelection(formattedText);
     }
   }
 
 }
 
+// funtion still under work
 function applyUnderline() {
   var selectedText = window.getSelection().toString();
   if (selectedText) {
     if (selectedText.startsWith("_") && selectedText.endsWith("_")) {
-      var modifiedText = selectedText.substring(1, selectedText.length - 1);
-      replaceSelection(modifiedText);
+      var formattedText = selectedText.substring(1, selectedText.length - 1);
+      replaceSelection(formattedText);
     }
     else {
-      var modifiedText = "_"+selectedText+"_";
-      replaceSelection(modifiedText);
+      var formattedText = "_"+selectedText+"_";
+      replaceSelection(formattedText);
     }
   }  
 }
 
+// converts and returns the text selected by the user
 function getSelectedText() {
   var text = "";
   if (window.getSelection) {
@@ -85,11 +87,12 @@ function getSelectedText() {
 }
 
 // This function replaces the selected text
-function replaceSelection(selection) {
-  // Get the textarea element by its ID
+function replaceSelection(replacement) {
+
   var textBox = document.getElementById("noteInput");
 
   // Get the start and end positions of the selected text
+  // Had to use a bit of chatGPT to figure out the syntax for these 2 lines
   var startPos = textBox.selectionStart;
   var endPos = textBox.selectionEnd;
 
@@ -98,6 +101,6 @@ function replaceSelection(selection) {
   var textAfter = textBox.value.substring(endPos, textBox.value.length);
 
   // Set the value of the textBox with the selected text removed
-  textBox.value = textBefore + selection + textAfter;
+  textBox.value = textBefore + replacement + textAfter;
 }
 

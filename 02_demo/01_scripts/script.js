@@ -1,3 +1,4 @@
+// Uses the fileSaver.js library to implement saving feature
 function saveFile()
 {
     let output = document.getElementById("noteInput").value;
@@ -8,13 +9,6 @@ function saveFile()
         let blob = new Blob([output], {type: "text/plain;charset=utf-8"});
         saveAs(blob, file_name + ".md");
     }
-}
-
-function openFile() {
-
-    chooseFile();
-    readFile();
-
 }
 
 function chooseFile() {
