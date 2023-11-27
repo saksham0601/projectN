@@ -9,7 +9,7 @@
 
     The test infrastructure to be used will be split into two parts; that which is within the scope the input window, and that which is outside.
 
-    Test cases handling functionality outside the input window will simple follow a detailed path of user inputs and aim for the descriptions of the expected behaviour.
+    Test cases handling functionality outside the input window will simply follow a detailed path of user inputs and aim for the descriptions of the expected behaviour.
     
     Test cases having to do with the input window's functionality will be automated with the use of a separate file named test.md, which will include all possible recognizable formattings of our program.
 

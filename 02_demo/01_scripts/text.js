@@ -32,63 +32,135 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function applyBold() {
   var selectedText = window.getSelection().toString();
+  var startPos = noteInput.selectionStart;
+  var endPos = noteInput.selectionEnd;
+
+  if(!selectedText){
+    // Insert the bold syntax at the current cursor position
+    noteInput.value = noteInput.value.substring(0, startPos) + '****' + noteInput.value.substring(endPos);
+    noteInput.selectionStart = startPos + 2;
+    noteInput.selectionEnd = startPos + 2;
+    
+    noteInput.focus();
+  }
+
   if (selectedText) {
     if (selectedText.startsWith("**") && selectedText.endsWith("**")) {
-      var formattedText = selectedText.substring(2, selectedText.length - 2);
+      var formattedText = selectedText.substring(1, selectedText.length - 1);
       replaceSelection(formattedText);
     }
     else {
-      var formattedText = "**"+selectedText+"**";
+      var formattedText = "**" + selectedText + "**";
       replaceSelection(formattedText);
     }
-  }  
+
+    noteInput.selectionStart = startPos + formattedText.length;
+    noteInput.selectionEnd = startPos + formattedText.length;
+
+    noteInput.focus();
+  } 
 }
 
 function applyItalic() {
 
   var selectedText = window.getSelection().toString();
+  var startPos = noteInput.selectionStart;
+  var endPos = noteInput.selectionEnd;
+
+  if(!selectedText){
+    // Insert the itlaics syntax at the current cursor position
+    noteInput.value = noteInput.value.substring(0, startPos) + '**' + noteInput.value.substring(endPos);
+
+    noteInput.selectionStart = startPos + 1;
+    noteInput.selectionEnd = startPos + 1;
+    
+    noteInput.focus();
+  }
+
   if (selectedText) {
     if (selectedText.startsWith("*") && selectedText.endsWith("*")) {
       var formattedText = selectedText.substring(1, selectedText.length - 1);
       replaceSelection(formattedText);
     }
     else {
-      var formattedText = "*"+selectedText+"*";
+      var formattedText = "*" + selectedText + "*";
       replaceSelection(formattedText);
     }
-  }
 
+    noteInput.selectionStart = startPos + formattedText.length;
+    noteInput.selectionEnd = startPos + formattedText.length;
+
+    noteInput.focus();
+  }
 }
 
 // funtion still under work
 function applyUnderline() {
   var selectedText = window.getSelection().toString();
+  var startPos = noteInput.selectionStart;
+  var endPos = noteInput.selectionEnd;
+
+  if(!selectedText){
+    // Insert the bold symbols at the current cursor position
+    noteInput.value = noteInput.value.substring(0, startPos) + '<u>' + selectedText + '</u>' + noteInput.value.substring(endPos);
+    
+    noteInput.selectionStart = startPos + 3;
+    noteInput.selectionEnd = startPos + selectedText.length + 3;
+    
+    noteInput.focus();
+  }
   if (selectedText) {
-    if (selectedText.startsWith("_") && selectedText.endsWith("_")) {
+    if (selectedText.startsWith("<u>") && selectedText.endsWith("</u>")) {
       var formattedText = selectedText.substring(1, selectedText.length - 1);
       replaceSelection(formattedText);
     }
     else {
-      var formattedText = "_"+selectedText+"_";
+      var formattedText = "<u>" + selectedText + "</u>";
       replaceSelection(formattedText);
     }
+
+    noteInput.selectionStart = startPos + formattedText.length;
+    noteInput.selectionEnd = startPos + formattedText.length;
+
+    noteInput.focus();
   }  
 }
 
-// converts and returns the text selected by the user
-function getSelectedText() {
-  var text = "";
-  if (window.getSelection) {
-      text = window.getSelection().toString();
-  } else if (document.selection && document.selection.type !== "Control") {
-      text = document.selection.createRange().text;
+function applyHighlight() {
+
+  var selectedText = window.getSelection().toString();
+  var startPos = noteInput.selectionStart;
+  var endPos = noteInput.selectionEnd;
+
+  if(!selectedText){
+    // Insert the itlaics syntax at the current cursor position
+    noteInput.value = noteInput.value.substring(0, startPos) + '====' + noteInput.value.substring(endPos);
+
+    noteInput.selectionStart = startPos + 2;
+    noteInput.selectionEnd = startPos + 2;
+    
+    noteInput.focus();
   }
-  return text;
+
+  if (selectedText) {
+    if (selectedText.startsWith("==") && selectedText.endsWith("==")) {
+      var formattedText = selectedText.substring(1, selectedText.length - 1);
+      replaceSelection(formattedText);
+    }
+    else {
+      var formattedText = "==" + selectedText + "==";
+      replaceSelection(formattedText);
+    }
+
+    noteInput.selectionStart = startPos + formattedText.length;
+    noteInput.selectionEnd = startPos + formattedText.length;
+
+    noteInput.focus();
+  }
 }
 
 // This function replaces the selected text
 function replaceSelection(replacement) {
-
   var textBox = document.getElementById("noteInput");
 
   // Get the start and end positions of the selected text
