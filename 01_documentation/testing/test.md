@@ -21,3 +21,33 @@
     2. B
 4. C
 
+- Unordered List
+- A
+- B
+- C
+
+* A
+* B
+* C
+* D
+
++ A
++ B
++ C
++ D
+
+- A
+- B
+- C
+    - A
+    - B
+- D
+
+> This is a blockquote
+
+`This is a codeblock`
+
+This is a URL: <<https://www.markdownguide.org>>
+
+This is an image: [![Level 2-1](01_documentation/design_document/imgs/level_2-1.jpg "Level 2-1")]
+
