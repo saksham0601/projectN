@@ -18,3 +18,10 @@ document.addEventListener('keydown', function (event) {
         applyUnderline(); // Trigger the underline function
     }
 });
+
+document.addEventListener('keydown', function (event) {
+    if (event.ctrlKey && event.key === 'h') {
+        event.preventDefault(); // Prevent the default browser behavior
+        applyHighlight(); // Trigger the underline function
+    }
+});
