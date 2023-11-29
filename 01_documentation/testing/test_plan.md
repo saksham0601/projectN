@@ -31,6 +31,8 @@ Test cases having to do with the input window's functionality will be tested wit
 | Linking              | User is able to switch between different modes that are linked together                                                                                                   | N/A                      |
 | External file | User is able to import accepted file formats from their computer onto the webpage                  | N/A                   |
 | Formatting    | Formatting is successfully recognized                                                              | test.md & expected.pdf |
+| Css    | Make sure the css makes the webapp behave the way it is expected to                                                              | N/A |
+| Buttons   | User is able to use the provided buttons + perform the expected function                                                              | N/A |
 
 
 ### Testing Case 1
@@ -131,3 +133,24 @@ Expected behaviour:
 - The user is asked to save any unsaved work.
 - The user is taken to the home page(landing page).
 - The recent file that the user was working on is shown under recent files.
+
+### Testing Case 4
+
+The user uses different buttons and elements of the webapp.
+
+#### Case 4.1
+
+The user hovers over an element of the webpage
+
+Expected behaviour:
+
+- The element behaves like it is expected to according to the css
+
+#### Case 4.2
+
+The user clicks on the element/button
+
+Expected behaviour:
+
+- The element/button performs the function it is assigned
+- If there is an animation linked to clicking, it performs that animation.
