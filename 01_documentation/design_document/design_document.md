@@ -161,6 +161,7 @@ For the most part, we are using Google standards for the physical design of the 
 - In the beginning phases of the projectN, Vanilla JavaScript will be used, aiming to integrate the next.js framework as the project progresses.
 - HTML
 - For the style we are using CSS with the extension Sassy CSS (SCSS).
+- Selenium to automate the testing process.
 - An external server to host. 
 
 ### Directory and File Naming Structure to be Used Within the Code Repository
