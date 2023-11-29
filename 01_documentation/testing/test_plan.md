@@ -30,7 +30,7 @@ Test cases having to do with the input window's functionality will be tested wit
 | Blank Page    | User is able to start from scratch + is provided a warning that unsaved work will be lost          | N/A                   |
 | Linking              | User is able to switch between different modes that are linked together                                                                                                   | N/A                      |
 | External file | User is able to import accepted file formats from their computer onto the webpage                  | N/A                   |
-| Formatting    | Formatting is successfully recognized                                                              | test.md & expected.md |
+| Formatting    | Formatting is successfully recognized                                                              | test.md & expected.pdf |
 
 
 ### Testing Case 1
