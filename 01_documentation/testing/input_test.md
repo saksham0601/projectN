@@ -49,5 +49,14 @@
 
 This is a URL: <<https://www.markdownguide.org>>
 
-This is an image: [![Level 2-1](01_documentation/design_document/imgs/level_2-1.jpg "Level 2-1")]
+This is an image: ![](testing_image/test_image.png)
+
+==This text should be higlighted==
+
+| Table Heading | Table heading |
+| ------------- | ------------- |
+| Cell 1 | Cell 2 |
+| Cell 3 | Cell 4 |
+
+
 
