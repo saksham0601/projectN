@@ -19,7 +19,7 @@ The test infrastructure to be used will be split into two parts; that which is w
 
 Test cases handling functionality outside the input window will simply follow a detailed path of user inputs and aim for the descriptions of the expected behaviour. For this we will be using Selenium.
     
-Test cases having to do with the input window's functionality will be tested with the use of a separate files, which will include all possible recognizable formattings of our program. We are going to have test.md as our sample text and perform function on it and compare it with a file with the expected output called expected.md. They will also handle out of scope input; incorrect input; not accepted file formats. 
+Test cases having to do with the input window's functionality will be tested with the use of a separate files, which will include all possible recognizable formattings of our program. We are going to have test.md as our sample text in markdown format and make sure it behaves the way we expect it to on our webapp. The test cases will also handle out of scope input; incorrect input; not accepted file formats. 
 
 ## Test Cases
 

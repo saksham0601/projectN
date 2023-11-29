@@ -58,5 +58,3 @@ This is an image: ![](imgs/test_image.png)
 | Cell 1 | Cell 2 |
 | Cell 3 | Cell 4 |
 
-
-
