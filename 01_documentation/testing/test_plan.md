@@ -83,7 +83,7 @@ Expected behaviour:
 - The user gets an error message saying "Selected file not supported.".
 - The user is asked to choose another file from their computer.
 
-#### Case 1.4
+#### Case 1.6
 
 The user tries to save a file with the correct format
 
