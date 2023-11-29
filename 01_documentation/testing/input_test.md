@@ -49,7 +49,7 @@
 
 This is a URL: <<https://www.markdownguide.org>>
 
-This is an image: ![](testing_image/test_image.png)
+This is an image: ![](imgs/test_image.png)
 
 ==This text should be higlighted==
 
