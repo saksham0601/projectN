@@ -2,8 +2,7 @@
 
 ## Testing Techniques
 
-    - Manual user input in cases to test functionality outside of the input window's scope
-    - Use a sample .md file intended for testing purposes to ensure functionality of input window
+    We will be using Selenium to act as a user and test various elements of our website. 
 
 ## Testing Infrastructure
 
