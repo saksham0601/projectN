@@ -2,7 +2,8 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  max-width: 100%; /* Or the max width you prefer */
+  max-width: 100%;
+  /* Or the max width you prefer */
   padding: 0.5rem 1rem;
 }
 
@@ -11,7 +12,8 @@ textarea {
   min-height: 78vh;
   padding: 10px;
   margin-top: 2.5rem;
-  font-size: 1em; /* Adjust font size as needed */
+  font-size: 1em;
+  /* Adjust font size as needed */
   box-shadow: 0 0 10px #1C1C23;
   outline: none;
   border: none;
@@ -19,7 +21,8 @@ textarea {
   background-color: #31313f;
   color: white;
   border-radius: 1rem;
-  resize: none; /* Disable textarea resizing */
+  resize: none;
+  /* Disable textarea resizing */
 }
 
 #note-display {
@@ -30,9 +33,12 @@ textarea {
   z-index: 0;
   box-shadow: 0 0 10px #1C1C23;
   background-color: #31313f;
-  overflow-y: auto; /* Adds a scrollbar if content is too long */
-  font-size: 1em; /* Adjust font size as needed */
-  white-space: pre-wrap; /* Keeps the line breaks and spacing */
+  overflow-y: auto;
+  /* Adds a scrollbar if content is too long */
+  font-size: 1em;
+  /* Adjust font size as needed */
+  white-space: pre-wrap;
+  /* Keeps the line breaks and spacing */
   border-radius: 1rem;
 }
 
@@ -160,15 +166,21 @@ body {
   transition: 0.6s ease;
   transition-property: left;
 }
-
-.sidebar .logo i {
-  font-size: 30px;
-  color: #ffffff;
-  padding: 0.35rem 0 0 0.35rem;
+.sidebar-list {
+  position: relative;
+  padding-top: 0.75rem;
+}
+.sidebar-list li {
+  list-style: none;
+}
+.sidebar-list i {
+  padding: 0 0.5rem;
+}
+.sidebar-list svg {
+  padding: 0 0.5rem;
 }
 
-.sidebar .logo .logo_name {
-  font-size: 22px;
-  color: #ffffff;
-  font-weight: 600;
+a {
+  color: white;
+  text-decoration: none;
 }/*# sourceMappingURL=styles.css.map */
