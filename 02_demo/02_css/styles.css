@@ -10,6 +10,7 @@ textarea {
   width: 48%;
   min-height: 78vh;
   padding: 10px;
+  margin-top: 2.5rem;
   font-size: 1em; /* Adjust font size as needed */
   box-shadow: 0 0 10px #1C1C23;
   outline: none;
@@ -20,10 +21,11 @@ textarea {
   resize: none; /* Disable textarea resizing */
 }
 
-#noteDisplay {
+#note-display {
   width: 48%;
   min-height: 78vh;
   padding: 10px;
+  margin-top: 2.5rem;
   box-shadow: 0 0 10px #1C1C23;
   background-color: #31313f;
   overflow-y: auto; /* Adds a scrollbar if content is too long */
@@ -66,7 +68,7 @@ body {
   opacity: 90%;
   box-shadow: 0 0 10px #1C1C23;
 }
-.nav__list {
+.nav-list {
   display: flex;
   float: left;
   justify-content: flex-start;
@@ -74,7 +76,7 @@ body {
   gap: 1rem;
   padding: 0 1rem;
 }
-.nav__listlogo {
+.nav-listlogo {
   list-style: none;
   margin-right: auto;
   cursor: pointer;
@@ -90,7 +92,7 @@ body {
 
   }*/
 }
-.nav__listitem {
+.nav-listitem {
   list-style: none;
   position: relative;
   padding: 1rem 1rem;
@@ -98,7 +100,7 @@ body {
   margin-right: auto;
   /*pseudo elements*/
 }
-.nav__listitem::after {
+.nav-listitem::after {
   content: "";
   width: 0;
   height: 0.03rem;
@@ -109,14 +111,14 @@ body {
   background-color: white;
   transition: width 200ms ease-in-out;
 }
-.nav__listitem:hover::after, .nav__listitem:focus::after {
+.nav-listitem:hover::after, .nav-listitem:focus::after {
   width: 80%;
 }
-.nav__listitem:hover ul, .nav__listitem:focus ul {
+.nav-listitem:hover ul, .nav-listitem:focus ul {
   opacity: 1;
   visibility: visible;
 }
-.nav__listitemdrop {
+.nav-listitemdrop {
   position: absolute;
   top: 2.7rem;
   left: 1rem;
@@ -131,12 +133,36 @@ body {
   visibility: hidden;
   transition: opacity 200ms ease-in-out;
 }
-.nav__listitemdrop li {
+.nav-listitemdrop li {
   list-style: none;
   padding: 0.5rem 1rem;
   border-radius: 0.2rem;
   transition: #31313f 200ms ease-in-out;
 }
-.nav__listitemdrop li:hover, .nav__listitemdrop li:focus {
+.nav-listitemdrop li:hover, .nav-listitemdrop li:focus {
   background-color: #31313D;
+}
+
+.sidebar {
+  position: fixed;
+  background: #3f3f4e;
+  width: 260px;
+  height: 100%;
+  top: 40px;
+  left: 0;
+  overflow-y: auto;
+  transition: 0.6s ease;
+  transition-property: left;
+}
+
+.sidebar .logo i {
+  font-size: 30px;
+  color: #ffffff;
+  padding: 0.35rem 0 0 0.35rem;
+}
+
+.sidebar .logo .logo_name {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 600;
 }/*# sourceMappingURL=styles.css.map */

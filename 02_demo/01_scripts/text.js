@@ -1,7 +1,7 @@
 // Markdown implementation was done with the help of ChatGPT
 document.addEventListener('DOMContentLoaded', () => {
-  const noteInput = document.getElementById('noteInput');
-  const noteDisplay = document.getElementById('noteDisplay');
+  const noteInput = document.getElementById('note-input');
+  const noteDisplay = document.getElementById('note-display');
 
   // Custom renderer to handle ==highlighted text==
   const renderer = new marked.Renderer();
