@@ -45,3 +45,23 @@ function readFile() {
     }
 
 }
+
+function newDocument() {
+    // Get the current content of the document
+    let content = document.getElementById("note-input").value;
+
+    // Check if the document is not empty
+    if (content.length > 0) {
+        // Ask the user if they want to save the current document
+        let save = confirm("Do you want to save the current document?");
+
+        // If the user chooses to save
+        if (save) {
+            saveFile(); // Save the current document
+        }
+    }
+
+    // Clear the content of the document to start a new one
+    document.getElementById("noteInput").value = '';
+    document.getElementById("noteDisplay").innerText = '';
+}
