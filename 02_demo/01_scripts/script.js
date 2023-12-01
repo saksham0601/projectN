@@ -1,7 +1,7 @@
 // Uses the fileSaver.js library to implement saving feature
 function saveFile()
 {
-    let output = document.getElementById("noteInput").value;
+    let output = document.getElementById("note-input").value;
     let file_name = prompt("Please enter the file name", "MyNote");
 
     if (file_name)
