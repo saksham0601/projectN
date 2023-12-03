@@ -182,24 +182,30 @@ body {
     transition: 0.6s ease;
     transition-property: left;
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
 
     &-list {
-        position: relative;
         padding-top: 0.75rem;
         padding-left: 1rem;
-
+        
         &-quicknotes{
-            padding: 1rem 0 0 0;
+            position: relative;
+            top: 35dvh;
+            // padding: 2rem 0 0 0;
         }
         
         &-settings{
             position: relative;
-            top: 80%;
-            // padding: 10rem 0 0 0;
+            top: 70dvh;
+            // padding: 2rem 0 0 0;
         }
+
         hr {
-            width: 80%;
-            margin-top: 0rem;            
+            width: 75%;
+            margin-top: 0rem;
+            margin-left: 2.5rem;            
             border: 1px solid;
             opacity: 50%;
         }
@@ -209,7 +215,6 @@ body {
         }
 
         i {
-            
         }
 
         svg {

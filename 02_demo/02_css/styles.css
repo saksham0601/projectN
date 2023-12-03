@@ -165,22 +165,26 @@ body {
   transition: 0.6s ease;
   transition-property: left;
   display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
 }
 .sidebar-list {
-  position: relative;
   padding-top: 0.75rem;
   padding-left: 1rem;
 }
 .sidebar-list-quicknotes {
-  padding: 1rem 0 0 0;
+  position: relative;
+  top: 35dvh;
 }
 .sidebar-list-settings {
   position: relative;
-  top: 80%;
+  top: 70dvh;
 }
 .sidebar-list hr {
-  width: 80%;
+  width: 75%;
   margin-top: 0rem;
+  margin-left: 2.5rem;
   border: 1px solid;
   opacity: 50%;
 }
