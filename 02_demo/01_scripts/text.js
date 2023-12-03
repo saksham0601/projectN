@@ -161,7 +161,7 @@ function applyHighlight() {
 
 // This function replaces the selected text
 function replaceSelection(replacement) {
-  var textBox = document.getElementById("noteInput");
+  var textBox = document.getElementById("note-input");
 
   // Get the start and end positions of the selected text
   // Had to use a bit of chatGPT to figure out the syntax for these 2 lines
