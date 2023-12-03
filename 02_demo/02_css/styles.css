@@ -172,20 +172,3 @@ body {
   color: #ffffff;
   font-weight: 600;
 }/*# sourceMappingURL=styles.css.map */
-
-.savePopUp {
-  position: fixed;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.savePopUp.open {
-  opacity: 1;
-  z-index: 999;
-}
