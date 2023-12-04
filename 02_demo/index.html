@@ -19,11 +19,13 @@
             <li class="nav-listitem">Home</li>
             <li class="nav-listitem">File
                 <ul class="nav-listitemdrop">
-                    <li><button type="button" onclick="openSavePopUp();" id="saveFile">Save</button></li>                    
+                    <li><button type="button" onclick="openSavePopUp();" id="saveFile">Save</button></li>
                     <li><button type="button" onclick="saveFile();" id="saveFile">Save As</button></li>
                     <li><button>Save Copy</button></li>
                     <li><button type="button" onclick="newDocument();">New</button></li>
-                    <button onclick="document.getElementById('fileInput').click();"><li style="text-align: left;">Open</li></button>
+                    <button onclick="document.getElementById('fileInput').click();">
+                        <li style="text-align: left;">Open</li>
+                    </button>
                     <li><button>Open Recent</button></li>
                     <li><button>Page Layout</button></li>
                     <li><button>Print</button></li>
@@ -42,6 +44,12 @@
             <li class="nav-listitem">Flashcards</li>
             <li class="nav-listitem">Quizzes</li>
             <li class="nav-listitem">View</li>
+            <li class="nav-listitem">Themes
+                <ul class="nav-listitemdrop">
+                    <li><button onclick="changeTheme('default')">Default</button></li>
+                    <li><button onclick="changeTheme('light')">Light</button></li>
+                </ul>
+            </li>
         </ul>
     </nav>
     <div class="sidebar">
