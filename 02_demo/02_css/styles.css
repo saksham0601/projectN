@@ -336,15 +336,60 @@ body {
   position: fixed;
   z-index: 3;
   border-radius: 1rem;
-  background: lightgray;
+  background: white;
   width: 260px;
-  height: 78%;
-  margin-top: 2.5rem;
-  left: 5px;
+  height: 78.5vh;
+  margin-top: 3rem;
   margin-bottom: 40px;
   overflow-y: auto;
+  overflow-x: auto;
   transition: 0.6s ease;
   transition-property: left;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 0 0 10px lightgrey;
+}
+.light-mode .sidebar-list {
+  padding-left: 1rem;
+  flex: 1;
+}
+.light-mode .sidebar-list-note {
+  position: relative;
+  margin-top: 3vh;
+  margin-bottom: 30vh;
+}
+.light-mode .sidebar-list-note hr.a {
+  width: 80%;
+  margin-top: 0rem;
+  margin-left: 2rem;
+  border: 1px solid;
+  opacity: 50%;
+}
+.light-mode .sidebar-list-note hr.b {
+  width: 70%;
+  margin-top: 0rem;
+  margin-left: 3rem;
+  border: 1px solid;
+  opacity: 50%;
+}
+.light-mode .sidebar-list li {
+  list-style: none;
+}
+.light-mode .sidebar-list svg {
+  padding: 0 0.2rem 0 1rem;
+}
+.light-mode .sidebar-list-quick {
+  position: relative;
+}
+.light-mode .sidebar .logo i {
+  font-size: 30px;
+  color: #ffffff;
+  padding: 0.35rem 0 0 0.35rem;
+}
+.light-mode .sidebar .logo .logo_name {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 600;
 }
 
 a {

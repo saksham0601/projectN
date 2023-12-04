@@ -384,16 +384,79 @@ body {
         position: fixed;
         z-index: 3;
         border-radius: 1rem;
-        background: lightgray;
+        background: white;
         width: 260px;
-        height: 78%;
-        margin-top: 2.5rem;
-        left: 5px;
+        height: 78.5vh;
+        margin-top: 3rem;
         margin-bottom: 40px;
         overflow-y: auto;
+        overflow-x: auto;
         transition: 0.6s ease;
         transition-property: left;
-      }
+        display: flex;
+        // flex-direction: row;
+        align-items: flex-start;
+        box-shadow: 0 0 10px lightgrey;
+    
+        &-list {
+            // padding-top: 0.75rem;
+            padding-left: 1rem;
+            flex: 1;
+    
+            &-note {
+                position:relative;
+                margin-top: 3vh;
+                hr.a{
+                    width: 80%;
+                    margin-top: 0rem;
+                    margin-left: 2rem;
+                    border: 1px solid;
+                    opacity: 50%;
+                }
+                hr.b{
+                    width: 70%;
+                    margin-top: 0rem;
+                    margin-left: 3rem;
+                    border: 1px solid;
+                    opacity: 50%;
+                }
+                margin-bottom: 30vh;
+    
+                &-chap{
+                    
+                    &-pages{
+    
+                    }
+                }
+            }
+    
+            li {
+                list-style: none;
+            }
+    
+            i {}
+    
+            svg {
+                padding: 0 0.2rem 0 1rem;
+            }
+            &-quick {
+                position: relative;
+            }
+        }
+    }
+    
+    .sidebar .logo i {
+        font-size: 30px;
+        color: #ffffff;
+        padding: 0.35rem 0 0 0.35rem;
+    
+    }
+    
+    .sidebar .logo .logo_name {
+        font-size: 22px;
+        color: #ffffff;
+        font-weight: 600;
+    }
 }
 a {
     color: white;
