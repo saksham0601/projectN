@@ -67,6 +67,7 @@ function newDocument() {
 function changeTheme(theme) {
     const body = document.body;
     const nav = document.querySelector('nav');
+    const sidebar = document.querySelector('sidebar')
 
     switch (theme) {
         case 'default':
@@ -81,7 +82,6 @@ function changeTheme(theme) {
         case 'light':
             body.style.backgroundColor = '#f9f9f9';
             body.style.color = '#333';
-            nav.style.backgroundColor = '#f9f9f9';
             const dropdowns = document.querySelectorAll('.nav-listitemdrop');
             dropdowns.forEach(dropdown => {
                 dropdown.style.backgroundColor = 'white';
