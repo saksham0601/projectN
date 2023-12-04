@@ -22,7 +22,7 @@ textarea {
   resize: none; /* Disable textarea resizing */
 }
 
-#note-display {
+#noteDisplay {
   width: 48%;
   min-height: 78vh;
   padding: 10px;

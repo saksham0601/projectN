@@ -97,14 +97,14 @@
         </ul>
     </div>
     <div id="app">
-        <textarea id="note-input" autocomplete="off" placeholder="Start typing in Markdown..."></textarea>
-        <div id="note-display"></div>
+        <textarea id="noteInput" autocomplete="off" placeholder="Start typing in Markdown..."></textarea>
+        <div id="noteDisplay"></div>
     </div>
 
     <!-- used to choose a file from your pc which is then read by the open button -->
     <input type="file" id="fileInput" style="display: none;" onchange="readFile()" />
     <button
-        style="box-shadow: 0 0 10px #1c1c1c; border-radius: 0.5rem; padding: 0.25rem 0.5rem; margin: 0.25rem 0.25rem 0rem 2rem;"
+        style="box-shadow: 0 0 10px #1c1c1c; border-radius: 0.5rem; padding: 0.25rem 0.5rem; margin: 0.25rem 0.25rem 0rem 2rem;" autocomplete="on"
         onclick="applyBold()">B</button>
     <button style="box-shadow: 0 0 10px #1c1c1c; border-radius: 0.5rem; padding: 0.25rem 11px; margin-right: 0.25rem;"
         onclick="applyItalic()">I</button>
@@ -115,6 +115,7 @@
     <script src="01_scripts/fileSaver.js"></script>
     <script src="01_scripts/shortcuts.js"></script>
     <script src="01_scripts/popup-modals.js"></script>
+    <script src="01_scripts/image-formatting.js"></script>
 </body>
 
 </html>
