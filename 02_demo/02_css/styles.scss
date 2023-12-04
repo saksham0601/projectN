@@ -9,7 +9,7 @@
 
 textarea {
     width: 48%;
-    min-height: 78vh;
+    min-height: 75vh;
     padding: 10px;
     margin-top: 2.5rem;
     font-size: 1em;
@@ -27,7 +27,7 @@ textarea {
 
 #note-display {
     width: 48%;
-    min-height: 78vh;
+    min-height: 75vh;
     padding: 10px;
     margin-top: 2.5rem;
     z-index: 0;
@@ -175,173 +175,66 @@ body {
     border-radius: 1rem;
     background: #3f3f4e;
     width: 260px;
-    height: 78%;
-    margin-top: 2.5rem;
-    left: 5px;
+    height: 78.5vh;
+    margin-top: 3rem;
     margin-bottom: 40px;
     overflow-y: auto;
+    overflow-x: auto;
     transition: 0.6s ease;
     transition-property: left;
-}
+    display: flex;
+    // flex-direction: row;
+    align-items: flex-start;
+    box-shadow: 0 0 10px #1C1C23;
 
-.sidebar .logo i {
-    font-size: 30px;
-    color: #ffffff;
-    padding: 0.35rem 0 0 0.35rem;
+    &-list {
+        // padding-top: 0.75rem;
+        padding-left: 1rem;
+        flex: 1;
 
-}
-
-.sidebar .logo .logo_name {
-    font-size: 22px;
-    color: #ffffff;
-    font-weight: 600;
-}
-
-.light-mode {
-    .nav {
-        position: fixed;
-        background-color: white;
-        width: 100rem;
-        height: 60px;
-        margin: -2rem;
-        opacity: 90%;
-        z-index: 5;
-        box-shadow: 0 0 10px lightgray;
-
-        &-list {
-            display: flex;
-            float: left;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 1rem;
-            padding: 0 1rem;
-
-            &logo {
-                list-style: none;
-                margin-right: auto;
-                cursor: pointer;
-
-                /* svg{
-                
-                width: 2.5rem;
-                transition: fill 250ms ease-in;
-                &:hover, &:focus{
-                    fix the hover states for logo lol aka fill
-                    fill: white;
-                }
-                
-
-            }*/
+        &-note {
+            position:relative;
+            margin-top: 3vh;
+            hr.a{
+                width: 80%;
+                margin-top: 0rem;
+                margin-left: 2rem;
+                border: 1px solid;
+                opacity: 50%;
             }
+            hr.b{
+                width: 70%;
+                margin-top: 0rem;
+                margin-left: 3rem;
+                border: 1px solid;
+                opacity: 50%;
+            }
+            margin-bottom: 30vh;
 
-            &item {
-                list-style: none;
-                position: relative;
-                padding: 1rem 1rem;
-                cursor: pointer;
-                margin-right: auto;
+            &-chap{
+                
+                &-pages{
 
-                /*pseudo elements*/
-                &::after {
-                    content: "";
-                    width: 0;
-                    height: 0.03rem;
-                    border-radius: $radius;
-                    position: absolute;
-                    left: 1rem;
-                    bottom: 0.8rem;
-                    background-color: black;
-                    transition: width 200ms ease-in-out;
-                }
-
-                &:hover::after,
-                &:focus::after {
-                    width: 80%;
-                }
-
-                &:hover ul,
-                &:focus ul {
-                    opacity: 1;
-                    visibility: visible;
-                }
-
-                &drop {
-                    position: absolute;
-                    top: 2.7rem;
-                    left: 1rem;
-                    box-shadow: 0 0 10px lightgrey;
-                    background-color: white;
-                    width: 10rem;
-                    padding: 1rem;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 0.5rem;
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: opacity 200ms ease-in-out;
-
-                    li {
-                        list-style: none;
-                        padding: 0.5rem 1rem;
-                        border-radius: $radius;
-                        transition: lightgray 200ms ease-in-out;
-
-                        &:hover,
-                        &:focus {
-                            background-color: lightgray;
-                        }
-                    }
                 }
             }
         }
+
+        li {
+            list-style: none;
+        }
+
+        i {}
+
+        svg {
+            padding: 0 0.2rem 0 1rem;
+        }
+        &-quick {
+            position: relative;
+        }
     }
-    textarea {
-        width: 48%;
-        min-height: 78vh;
-        padding: 10px;
-        margin-top: 2.5rem;
-        font-size: 1em;
-        /* Adjust font size as needed */
-        box-shadow: 0 0 10px lightgray;
-        outline: none;
-        border: none;
-        z-index: 0;
-        background-color: white;
-        color: black;
-        border-radius: 1rem;
-        resize: none;
-        /* Disable textarea resizing */
-    }
-    
-    #note-display {
-        width: 48%;
-        min-height: 78vh;
-        padding: 10px;
-        margin-top: 2.5rem;
-        z-index: 0;
-        box-shadow: 0 0 10px lightgray;
-        background-color: white;
-        color: black;
-        overflow-y: auto;
-        /* Adds a scrollbar if content is too long */
-        font-size: 1em;
-        /* Adjust font size as needed */
-        white-space: pre-wrap;
-        /* Keeps the line breaks and spacing */
-        border-radius: 1rem;
-    }
-    .sidebar {
-        position: fixed;
-        z-index: 3;
-        border-radius: 1rem;
-        background: lightgray;
-        width: 260px;
-        height: 78%;
-        margin-top: 2.5rem;
-        left: 5px;
-        margin-bottom: 40px;
-        overflow-y: auto;
-        transition: 0.6s ease;
-        transition-property: left;
-      }
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
