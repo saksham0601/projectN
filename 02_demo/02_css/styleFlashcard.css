@@ -7,15 +7,14 @@ body {
 }
 
 .nav-bar {
+  position: fixed;
+  background-color: #31313f;
   width: 100rem;
   height: 60px;
+  margin: -1rem;
+  opacity: 90%;
+  z-index: 5;
   box-shadow: 0 0 10px #1C1C23;
-  background-color: #383845;
-  /* Example color for the nav bar */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
 }
 
 .nav-list {
