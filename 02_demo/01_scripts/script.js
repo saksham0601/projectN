@@ -92,6 +92,7 @@ function changeTheme(theme) {
             break;
     }
     body.classList.toggle('light-mode', theme === 'light');
+    saveTheme(theme); // Save the selected theme
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -135,3 +136,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+   // Save selected theme to localStorage
+   function saveTheme(theme) {
+    localStorage.setItem('selectedTheme', theme);
+  }
+
+  // Retrieve selected theme from localStorage
+  function getSavedTheme() {
+    return localStorage.getItem('selectedTheme');
+  }
+
+  // Apply the saved theme on page load
+  document.addEventListener('DOMContentLoaded', function () {
+    const savedTheme = getSavedTheme();
+    if (savedTheme) {
+      changeTheme(savedTheme);
+    }
+  }); 

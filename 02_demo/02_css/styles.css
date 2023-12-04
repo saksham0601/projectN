@@ -395,4 +395,29 @@ body {
 a {
   color: white;
   text-decoration: none;
+}
+
+.bottom-toolbar {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  align-items: center;
+  background: #3f3f4e;
+  color: white;
+  height: 3vm; /* Adjust as needed */
+  padding: 0 20px; /* Add padding for better appearance */
+  width: 15vm; /* Full width */
+  position: absolute;
+  left: 50%;
+  bottom: 3vm;
+  border-radius: 0.5rem;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px #1C1C23;
+}
+
+.toolbar-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem;
 }/*# sourceMappingURL=styles.css.map */
