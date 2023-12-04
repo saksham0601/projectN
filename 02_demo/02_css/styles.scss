@@ -669,11 +669,7 @@ a {
     color: white;
     height: 3vm;
     /* Adjust as needed */
-<<<<<<< Updated upstream
     padding: 0.5rem 1rem 0.5rem 1rem;
-=======
-    padding: 0 20px;
->>>>>>> Stashed changes
     /* Add padding for better appearance */
     width: 15vm;
     /* Full width */
@@ -686,7 +682,6 @@ a {
 }
 
 .toolbar-item {
-<<<<<<< Updated upstream
     &-i{
         box-shadow: 0 0 10px #1c1c1c;
         border-radius: 0.5rem;
@@ -704,10 +699,4 @@ a {
         border-radius: 0.5rem;
         padding: 0.25rem 0.5rem;
     }
-=======
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.1rem;
->>>>>>> Stashed changes
 }
