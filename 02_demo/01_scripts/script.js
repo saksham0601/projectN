@@ -1,6 +1,6 @@
 // Uses the fileSaver.js library to implement saving feature
 function saveFile() {
-    let output = document.getElementById("note-input").value;
+    let output = document.getElementById("noteInput").value;
     let file_name = prompt("Please enter the file name", "MyNote");
 
     if (file_name) {
@@ -34,7 +34,7 @@ function readFile() {
             var contents = e.target.result;
 
             // Display the contents in the textarea
-            var fileContentsTextarea = document.getElementById('note-input');
+            var fileContentsTextarea = document.getElementById('noteInput');
             fileContentsTextarea.value = contents;
         };
 
@@ -46,7 +46,7 @@ function readFile() {
 
 function newDocument() {
     // Get the current content of the document
-    let content = document.getElementById("note-input").value;
+    let content = document.getElementById("noteInput").value;
 
     // Check if the document is not empty
     if (content.length > 0) {
@@ -60,7 +60,7 @@ function newDocument() {
     }
 
     // Clear the content of the document to start a new one
-    document.getElementById("note-input").value = '';
+    document.getElementById("noteInput").value = '';
     document.getElementById("note-display").innerText = '';
 }
 

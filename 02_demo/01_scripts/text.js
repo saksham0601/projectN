@@ -1,7 +1,7 @@
 // Markdown implementation was done with the help of ChatGPT
 document.addEventListener('DOMContentLoaded', () => {
-  const noteInput = document.getElementById('note-input');
-  const noteDisplay = document.getElementById('note-display');
+  const noteInput = document.getElementById("noteInput");
+  const noteDisplay = document.getElementById("note-display");
 
   // Custom renderer to handle ==highlighted text==
   const renderer = new marked.Renderer();
@@ -161,7 +161,7 @@ function applyHighlight() {
 
 // This function replaces the selected text
 function replaceSelection(replacement) {
-  var textBox = document.getElementById("note-input");
+  var textBox = document.getElementById("noteInput");
 
   // Get the start and end positions of the selected text
   // Had to use a bit of chatGPT to figure out the syntax for these 2 lines
