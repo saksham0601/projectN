@@ -1,4 +1,5 @@
 // Uses the fileSaver.js library to implement saving feature
+
 function saveFile()
 {
     let output = document.getElementById("note-input").value;
@@ -16,6 +17,7 @@ function chooseFile() {
     document.getElementById('fileInput').click();
 
 }
+
 
 function readFile() {
     // Get the input element
@@ -36,7 +38,7 @@ function readFile() {
             var contents = e.target.result;
 
             // Display the contents in the textarea
-            var fileContentsTextarea = document.getElementById('noteInput');
+            var fileContentsTextarea = document.getElementById('note-input');
             fileContentsTextarea.value = contents;
         };
 
@@ -62,6 +64,6 @@ function newDocument() {
     }
 
     // Clear the content of the document to start a new one
-    document.getElementById("noteInput").value = '';
-    document.getElementById("noteDisplay").innerText = '';
+    document.getElementById("note-input").value = '';
+    document.getElementById("note-display").innerText = '';
 }

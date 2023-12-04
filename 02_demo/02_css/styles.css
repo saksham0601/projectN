@@ -173,19 +173,49 @@ body {
   font-weight: 600;
 }/*# sourceMappingURL=styles.css.map */
 
-.savePopUp {
+.modal {
   position: fixed;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: #66668a;
+  width: 350px;
+  height: 100px;
+  max-width: 80%;
 }
 
-.savePopUp.open {
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-body {
+  padding: 10px 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+  z-index: 4;
+}
+
+#overlay.active {
   opacity: 1;
-  z-index: 999;
+  pointer-events: all;
+}
+
+.modal-button {
+  justify-content: center;
+  
 }

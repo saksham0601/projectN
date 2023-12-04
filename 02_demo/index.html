@@ -12,24 +12,43 @@
 </head>
 
 <body>
-    <nav class="nav">
-        <div class = "popup" id = "savePopUp">
-            <div class = "savePopUpInner">
-                <h2> Would you like to save the current file? </h2>
-                <button type="button" onlclick="saveFile();" id="confirmSave"> Yes </button>
-                <button type="button" onlclick="cancelSaveFile();" id="cancelSave"> Yes </button>
-            </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-body">
+            Would you like to save the current note?
         </div>
+        <button data-confirm-button class = "modal-button"> Yes </button>
+        <button data-close-button class="modal-button"> No </button>
+    </div>
+
+    <div class="modal" id="newDocModal">
+        <div class="modal-body">
+            Would you like to save the current note before starting anew?
+        </div>
+        <button data-confirm-button class = "modal-button"> Yes </button>
+        <button new-doc-button class="modal-button"> No </button>
+    </div>
+    
+    <div class="modal" id="noInputModal">
+        <div class="modal-body">
+            The user has not written anything!
+        </div>
+        <button new-doc-button class="modal-button"> OK </button>
+    </div>
+
+
+    <div id="overlay"></div>
+
+    <nav class="nav">
         <ul class="nav-list">
             <div style="margin-left: 1.5rem;"><big>ℕ</big></div>
             <p></p>
             <li class="nav-listitem">Home</li>
             <li class="nav-listitem">File
                 <ul class="nav-listitemdrop">
-                    <li><button type="button" onclick="openSavePopUp();" id="saveFile">Save</button></li>                    
-                    <li><button type="button" onclick="saveFile();" id="saveFile">Save As</button></li>
+                    <li><button data-modal-target="#modal" autocomplete="off">Save File</button></li>
                     <li><button>Save Copy</button></li>
-                    <li><button type="button" onclick="newDocument();">New</button></li>
+                    <li><button data-modal-target="#newDocModal" autocomplete="off">New</button></li>
                     <button onclick="document.getElementById('fileInput').click();"><li style="text-align: left;">Open</li></button>
                     <li><button>Open Recent</button></li>
                     <li><button>Page Layout</button></li>
@@ -41,7 +60,7 @@
             <li class="nav-listitem">Insert
                 <ul class="nav-listitemdrop">
                     <li><button>Blank Page</button></li>
-                    <li><button>File</button></li>
+                    <li><button>File</button></li>input
                     <li><button>Image</button></li>
                 </ul>
             </li>
@@ -78,7 +97,7 @@
         </ul>
     </div>
     <div id="app">
-        <textarea id="note-input" placeholder="Start typing in Markdown..."></textarea>
+        <textarea id="note-input" autocomplete="off" placeholder="Start typing in Markdown..."></textarea>
         <div id="note-display"></div>
     </div>
 
@@ -95,6 +114,7 @@
     <script src="01_scripts/script.js"></script>
     <script src="01_scripts/fileSaver.js"></script>
     <script src="01_scripts/shortcuts.js"></script>
+    <script src="01_scripts/popup-modals.js"></script>
 </body>
 
 </html>
