@@ -19,11 +19,13 @@
             <li class="nav-listitem">Home</li>
             <li class="nav-listitem">File
                 <ul class="nav-listitemdrop">
-                    <li><button type="button" onclick="openSavePopUp();" id="saveFile">Save</button></li>                    
+                    <li><button type="button" onclick="openSavePopUp();" id="saveFile">Save</button></li>
                     <li><button type="button" onclick="saveFile();" id="saveFile">Save As</button></li>
                     <li><button>Save Copy</button></li>
                     <li><button type="button" onclick="newDocument();">New</button></li>
-                    <button onclick="document.getElementById('fileInput').click();"><li style="text-align: left;">Open</li></button>
+                    <button onclick="document.getElementById('fileInput').click();">
+                        <li style="text-align: left;">Open</li>
+                    </button>
                     <li><button>Open Recent</button></li>
                     <li><button>Page Layout</button></li>
                     <li><button>Print</button></li>
@@ -50,7 +52,6 @@
             </li>
         </ul>
     </nav>
-    <!--
     <div class="sidebar">
         <div class="logo">
             <i class='bx bxs-note'></i>
@@ -77,7 +78,6 @@
             </li>
         </ul>
     </div>
-     -->
     <div id="app">
         <textarea id="note-input" placeholder="Start typing in Markdown..."></textarea>
         <div id="note-display"></div>
