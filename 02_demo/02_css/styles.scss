@@ -247,6 +247,99 @@ body {
     font-weight: 600;
 }
 
+.flashcardForm {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.flashcardForm input[type="text"] {
+    background-color: #31313f;
+    box-shadow: 0 0 10px #1C1C23;
+    color: white;
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.flashcardForm button {
+    background-color: #31313f;
+    box-shadow: 0 0 10px #1C1C23;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.flashcard-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    word-wrap: break-word;
+    /* Allow words to break onto the next line */
+    padding: 10px;
+}
+
+.flashcard {
+    background-color: #31313f;
+    box-shadow: 0 0 10px #1C1C23;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 300px;
+    min-height: 150px;
+    word-wrap: break-word;
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.navigation button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #31313f;
+    box-shadow: 0 0 10px #1C1C23;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+/* Positioning the flashcard between navigation buttons */
+.navigation button:first-child {
+    margin-right: 20px;
+}
+
+.navigation button:last-child {
+    margin-left: 20px;
+}
+
+/* Hide the flashcards initially */
+.flashcard {
+    display: none;
+}
+
+/* Style for the currently active flashcard */
+.flashcard.active {
+    display: block;
+}
+
 .light-mode {
     .nav {
         position: fixed;
@@ -447,19 +540,120 @@ body {
         }
     }
 
-    .sidebar .logo i {
-        font-size: 30px;
-        color: #ffffff;
-        padding: 0.35rem 0 0 0.35rem;
-
+    .flashcardForm {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
     }
 
-    .sidebar .logo .logo_name {
-        font-size: 22px;
-        color: #ffffff;
-        font-weight: 600;
+    .flashcardForm input[type="text"] {
+        background-color: white;
+        box-shadow: 0 0 10px lightgray;
+        color: black;
+        margin-right: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .flashcardForm button {
+        background-color: white;
+        box-shadow: 0 0 10px lightgray;
+        color: black;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .flashcard-container {
+        color: black;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        word-wrap: break-word;
+        /* Allow words to break onto the next line */
+        padding: 10px;
+    }
+
+    .flashcard {
+        background-color: white;
+        box-shadow: 0 0 10px lightgrey;
+        color: black;
+        border-radius: 10px;
+        padding: 20px;
+        min-width: 300px;
+        min-height: 150px;
+        word-wrap: break-word;
+        margin: 10px;
+        box-sizing: border-box;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .navigation button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 0 0 10px lightgray;
+        color: black;
+        cursor: pointer;
+        font-size: 1.5em;
+    }
+
+    /* Positioning the flashcard between navigation buttons */
+    .navigation button:first-child {
+        margin-right: 20px;
+    }
+
+    .navigation button:last-child {
+        margin-left: 20px;
+    }
+
+    /* Hide the flashcards initially */
+    .flashcard {
+        display: none;
+    }
+
+    /* Style for the currently active flashcard */
+    .flashcard.active {
+        display: block;
+    }
+
+    #addCard {
+        background-color: white;
+        box-shadow: 0 0 10px lightgray;
+        color: black;
     }
 }
+
+.sidebar .logo i {
+    font-size: 30px;
+    color: #ffffff;
+    padding: 0.35rem 0 0 0.35rem;
+
+}
+
+.sidebar .logo .logo_name {
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
 
 a {
     color: white;
@@ -475,7 +669,11 @@ a {
     color: white;
     height: 3vm;
     /* Adjust as needed */
+<<<<<<< Updated upstream
     padding: 0.5rem 1rem 0.5rem 1rem;
+=======
+    padding: 0 20px;
+>>>>>>> Stashed changes
     /* Add padding for better appearance */
     width: 15vm;
     /* Full width */
@@ -488,6 +686,7 @@ a {
 }
 
 .toolbar-item {
+<<<<<<< Updated upstream
     &-i{
         box-shadow: 0 0 10px #1c1c1c;
         border-radius: 0.5rem;
@@ -505,4 +704,10 @@ a {
         border-radius: 0.5rem;
         padding: 0.25rem 0.5rem;
     }
+=======
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1rem;
+>>>>>>> Stashed changes
 }

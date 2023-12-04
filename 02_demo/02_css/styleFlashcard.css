@@ -79,13 +79,13 @@ body {
   background-color: #31313D;
 }
 
-.flashcard-form {
+.flashcardForm {
   display: flex;
   justify-content: center;
   margin: 20px;
 }
 
-.flashcard-form input[type="text"] {
+.flashcardForm input[type="text"] {
   background-color: #31313f;
   box-shadow: 0 0 10px #1C1C23;
   color: white;
@@ -95,7 +95,7 @@ body {
   border-radius: 5px;
 }
 
-.flashcard-form button {
+.flashcardForm button {
   background-color: #31313f;
   box-shadow: 0 0 10px #1C1C23;
   color: white;
