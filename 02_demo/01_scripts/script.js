@@ -100,22 +100,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const sidebar = document.getElementById('sidebar');
 
     sidebarToggle.addEventListener('mouseover', function () {
-        sidebar.style.transform = "translateX(0px)";
+        sidebar.style.transform = "translateX(0%)";
     });
 
     sidebar.addEventListener('mouseover', function () {
-        sidebar.style.transform = "translateX(0px)";
+        sidebar.style.transform = "translateX(0%)";
     });
 
     sidebarToggle.addEventListener('mouseout', function () {
         if (!isMouseOverElement(sidebar) && !isCursorNearLeftEdge()) {
-            sidebar.style.transform = "translateX(-260px)";
+            sidebar.style.transform = "translateX(-100%)";
         }
     });
 
     sidebar.addEventListener('mouseout', function () {
         if (!isMouseOverElement(sidebarToggle) && !isCursorNearLeftEdge()) {
-            sidebar.style.transform = "translateX(-260px)";
+            sidebar.style.transform = "translateX(-100%)";
         }
     });
 
