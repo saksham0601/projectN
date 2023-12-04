@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcard App</title>
     <link rel="stylesheet" href="02_css/styleFlashcard.css">
 </head>
+
 <body>
-  
+
     <nav class="nav-bar">
-        <!-- Your navigation bar content goes here -->
+        <ul class="nav-list">
+            <div style="margin-left: 1.5rem;"><big>ℕ</big></div>
+            <p></p>
+            <li class="nav-listitem">Home</li>
+            <li class="nav-listitem">Flashcards</li>
+            <li class="nav-listitem">Quizzes</li>
+            <li class="nav-listitem">View</li>
+        </ul>
     </nav>
 
     <div class="flashcard-form">
@@ -19,13 +28,14 @@
     </div>
 
     <div class="navigation">
-        <button id="prevButton"><</button>
-        <button id="nextButton">></button>
+        <button id="prevButton">&lt</button>
+        <button id="nextButton">&gt</button>
     </div>
 
     <div class="flashcard-container"></div>
 
     <script src="01_scripts/flashcardApp.js"></script>
+    <script src="01_scripts/script.js"></script>
 </body>
-</html>
 
+</html>
