@@ -10,7 +10,6 @@ body {
   width: 100rem;
   height: 60px;
   margin: -2rem;
-  opacity: 90%;
   z-index: 5;
   box-shadow: 0 0 10px #1C1C23;
 }
@@ -110,7 +109,8 @@ body {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  word-wrap: break-word; /* Allow words to break onto the next line */
+  padding: 10px;
 }
 
 .flashcard {

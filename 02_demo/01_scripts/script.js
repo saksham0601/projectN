@@ -93,3 +93,45 @@ function changeTheme(theme) {
     }
     body.classList.toggle('light-mode', theme === 'light');
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sidebarToggle = document.getElementById('sidebar');
+    const sidebar = document.getElementById('sidebar');
+
+    sidebarToggle.addEventListener('mouseover', function () {
+        sidebar.style.transform = "translateX(0px)";
+    });
+
+    sidebar.addEventListener('mouseover', function () {
+        sidebar.style.transform = "translateX(0px)";
+    });
+
+    sidebarToggle.addEventListener('mouseout', function () {
+        if (!isMouseOverElement(sidebar) && !isCursorNearLeftEdge()) {
+            sidebar.style.transform = "translateX(-260px)";
+        }
+    });
+
+    sidebar.addEventListener('mouseout', function () {
+        if (!isMouseOverElement(sidebarToggle) && !isCursorNearLeftEdge()) {
+            sidebar.style.transform = "translateX(-260px)";
+        }
+    });
+
+    // to find if the mouse was over the element chatGPT was used to write this function
+    function isMouseOverElement(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            event.clientX >= rect.left &&
+            event.clientX <= rect.right &&
+            event.clientY >= rect.top &&
+            event.clientY <= rect.bottom
+        );
+    }
+    // made using chatGPT
+    function isCursorNearLeftEdge() {
+        const threshold = 20;
+        return event.clientX <= threshold;
+    }
+});
+
