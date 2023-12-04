@@ -78,6 +78,30 @@ function changeTheme(theme) {
             dropdown1.forEach(dropdown => {
                 dropdown.style.backgroundColor = '#383845';
             });
+            const darkToolbarButtons = document.querySelectorAll('.bottom-toolbar button');
+            darkToolbarButtons.forEach(button => {
+                button.style.backgroundColor = '#3f3f4e';
+                button.style.color = 'white';
+            });
+
+            const darkNavigationButtons = document.querySelectorAll('.navigation button');
+            darkNavigationButtons.forEach(button => {
+                button.style.backgroundColor = '#3f3f4e';
+                button.style.boxShadow = '0 0 10px #1C1C23';
+                button.style.color = 'white';
+            });
+
+            const darkFlashcardInputs = document.querySelectorAll('.flashcardForm input[type="text"]');
+            darkFlashcardInputs.forEach(input => {
+                input.style.backgroundColor = '#3f3f4e';
+                input.style.boxShadow = '0 0 10px #1C1C23';
+                input.style.color = 'white';
+            });
+            const darkFlashcardformbutton = document.querySelectorAll('.flashcardForm button');
+            darkFlashcardformbutton.forEach(button => {
+                button.style.color = 'white';
+            });
+
             break;
         case 'light':
             body.style.backgroundColor = '#f9f9f9';
@@ -107,7 +131,12 @@ function changeTheme(theme) {
             lightFlashcardformbutton.forEach(button => {
                 button.style.color = 'black';
             });
-            
+            const lightToolbarButtons = document.querySelectorAll('.bottom-toolbar button');
+            lightToolbarButtons.forEach(button => {
+                button.style.backgroundColor = 'white';
+                button.style.color = 'black';
+            });
+
             break;
         default:
             break;

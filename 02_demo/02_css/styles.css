@@ -562,6 +562,40 @@ body {
   box-shadow: 0 0 10px lightgray;
   color: black;
 }
+.light-mode .bottom-toolbar {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  color: black;
+  height: 3vm;
+  /* Adjust as needed */
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  /* Add padding for better appearance */
+  width: 15vm;
+  /* Full width */
+  position: absolute;
+  left: 50%;
+  bottom: 3vm;
+  border-radius: 0.5rem;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px lightgray;
+}
+.light-mode .toolbar-item-i {
+  border-radius: 0.5rem;
+  padding: 0.25rem 11px;
+  margin: 0 0.25rem 0 0;
+}
+.light-mode .toolbar-item-b {
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.25rem 0 0;
+}
+.light-mode .toolbar-item-u {
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
 
 .sidebar .logo i {
   font-size: 30px;
@@ -602,19 +636,16 @@ a {
 }
 
 .toolbar-item-i {
-  box-shadow: 0 0 10px #1c1c1c;
   border-radius: 0.5rem;
   padding: 0.25rem 11px;
   margin: 0 0.25rem 0 0;
 }
 .toolbar-item-b {
-  box-shadow: 0 0 10px #1c1c1c;
   border-radius: 0.5rem;
   padding: 0.25rem 0.5rem;
   margin: 0 0.25rem 0 0;
 }
 .toolbar-item-u {
-  box-shadow: 0 0 10px #1c1c1c;
   border-radius: 0.5rem;
   padding: 0.25rem 0.5rem;
 }/*# sourceMappingURL=styles.css.map */
