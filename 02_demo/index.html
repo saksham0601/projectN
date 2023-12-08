@@ -19,10 +19,14 @@
             <li class="nav-listitem">Home</li>
             <li class="nav-listitem">File
                 <ul class="nav-listitemdrop">
-                    <li><button type="button" onclick="openSavePopUp();" id="saveFile">Save</button></li>
-                    <li><button type="button" onclick="saveFile();" id="saveFile">Save As</button></li>
-                    <li><button>Save Copy</button></li>
-                    <li><button type="button" onclick="newDocument();">New</button></li>
+                    <button type="button" onclick="openSavePopUp();" id="saveFile">
+                        <li style="text-align: left;">Save</li>
+                    </button>
+                    <button type="button" onclick="saveFile();" id="saveFile">
+                        <li style="text-align: left;">Save As</li>
+                    </button>
+                    <button><li>Save Copy</li></button>
+                    <button type="button" onclick="newDocument();"><li>New</li></button>
                     <button onclick="document.getElementById('fileInput').click();">
                         <li style="text-align: left;">Open</li>
                     </button>

@@ -7,13 +7,13 @@
     padding: 0.5rem 1rem;
 }
 
+// area on left of screen where text is typed
 textarea {
     width: 48%;
     min-height: 75vh;
     padding: 10px;
     margin-top: 2.5rem;
     font-size: 1em;
-    /* Adjust font size as needed */
     box-shadow: 0 0 10px #1C1C23;
     outline: none;
     border: none;
@@ -25,6 +25,7 @@ textarea {
     /* Disable textarea resizing */
 }
 
+// area on right of screen where formatted text is displayed
 #note-display {
     width: 48%;
     min-height: 75vh;
@@ -42,9 +43,6 @@ textarea {
     border-radius: 1rem;
 }
 
-/* color variables*/
-$clr-defaultbg: #31313f;
-
 /* border radius*/
 $radius: 0.2rem;
 
@@ -55,6 +53,7 @@ $radius: 0.2rem;
     padding: 0;
 }
 
+// general button styling
 button {
     background: none;
     border: none;
@@ -65,12 +64,12 @@ button {
 }
 
 body {
-    /*find in google fonts later*/
     font-family: Arial, Helvetica, sans-serif;
     background-color: #31313f;
     color: #ffffff;
 }
 
+// top nav bar css
 .nav {
     position: fixed;
     background-color: #31313f;
@@ -92,18 +91,6 @@ body {
             list-style: none;
             margin-right: auto;
             cursor: pointer;
-
-            /* svg{
-                
-                width: 2.5rem;
-                transition: fill 250ms ease-in;
-                &:hover, &:focus{
-                    fix the hover states for logo lol aka fill
-                    fill: white;
-                }
-                
-
-            }*/
         }
 
         &item {
@@ -153,6 +140,7 @@ body {
                 transition: opacity 200ms ease-in-out;
 
                 li {
+                    text-align: left;
                     list-style: none;
                     padding: 0.5rem 1rem;
                     border-radius: $radius;
@@ -168,6 +156,7 @@ body {
     }
 }
 
+// hidden side bar css
 .sidebar {
     position: fixed;
     z-index: 3;
@@ -214,7 +203,10 @@ body {
 
             &-chap {
 
-                &-pages {}
+                // later fill in with the css for inserting and viewing chapters
+                &-pages {
+                    // later fill in with the css for inserting and viewing chapter
+                }
             }
         }
 
@@ -245,6 +237,50 @@ body {
     font-size: 22px;
     color: #ffffff;
     font-weight: 600;
+}
+
+// bottom toolbar that contains bold, italic and underline buttons
+.bottom-toolbar {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    align-items: center;
+    background: #3f3f4e;
+    color: white;
+    height: 3vm;
+    /* Adjust as needed */
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    /* Add padding for better appearance */
+    width: 15vm;
+    /* Full width */
+    position: absolute;
+    left: 50%;
+    bottom: 3vm;
+    border-radius: 0.5rem;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px #1C1C23;
+}
+
+.toolbar-item {
+    &-i {
+
+        border-radius: 0.5rem;
+        padding: 0.25rem 11px;
+        margin: 0 0.25rem 0 0;
+    }
+
+    &-b {
+
+        border-radius: 0.5rem;
+        padding: 0.25rem 0.5rem;
+        margin: 0 0.25rem 0 0;
+    }
+
+    &-u {
+
+        border-radius: 0.5rem;
+        padding: 0.25rem 0.5rem;
+    }
 }
 
 .flashcardForm {
@@ -340,6 +376,7 @@ body {
     display: block;
 }
 
+// css for the js function to switch to light mode
 .light-mode {
     .nav {
         position: fixed;
@@ -362,18 +399,6 @@ body {
                 list-style: none;
                 margin-right: auto;
                 cursor: pointer;
-
-                /* svg{
-                
-                width: 2.5rem;
-                transition: fill 250ms ease-in;
-                &:hover, &:focus{
-                    fix the hover states for logo lol aka fill
-                    fill: white;
-                }
-                
-
-            }*/
             }
 
             &item {
@@ -660,22 +685,24 @@ body {
         transform: translateX(-50%);
         box-shadow: 0 0 10px lightgray;
     }
-    
+
     .toolbar-item {
-        &-i{
-    
+        &-i {
+
             border-radius: 0.5rem;
             padding: 0.25rem 11px;
             margin: 0 0.25rem 0 0;
         }
-        &-b{
-       
+
+        &-b {
+
             border-radius: 0.5rem;
             padding: 0.25rem 0.5rem;
             margin: 0 0.25rem 0 0;
         }
-        &-u{
-        
+
+        &-u {
+
             border-radius: 0.5rem;
             padding: 0.25rem 0.5rem;
         }
@@ -699,45 +726,4 @@ body {
 a {
     color: white;
     text-decoration: none;
-}
-
-.bottom-toolbar {
-    display: flex;
-    align-self: center;
-    justify-content: space-between;
-    align-items: center;
-    background: #3f3f4e;
-    color: white;
-    height: 3vm;
-    /* Adjust as needed */
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    /* Add padding for better appearance */
-    width: 15vm;
-    /* Full width */
-    position: absolute;
-    left: 50%;
-    bottom: 3vm;
-    border-radius: 0.5rem;
-    transform: translateX(-50%);
-    box-shadow: 0 0 10px #1C1C23;
-}
-
-.toolbar-item {
-    &-i{
-    
-        border-radius: 0.5rem;
-        padding: 0.25rem 11px;
-        margin: 0 0.25rem 0 0;
-    }
-    &-b{
-       
-        border-radius: 0.5rem;
-        padding: 0.25rem 0.5rem;
-        margin: 0 0.25rem 0 0;
-    }
-    &-u{
-     
-        border-radius: 0.5rem;
-        padding: 0.25rem 0.5rem;
-    }
 }
