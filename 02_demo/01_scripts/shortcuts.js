@@ -1,7 +1,7 @@
 document.addEventListener('keydown', function (event) {
     if (event.ctrlKey && event.key === 'b') {
         event.preventDefault(); // Prevent the default browser behavior
-        applyBold();
+        applyBold(); // Calls the formatting function
     }
 });
 

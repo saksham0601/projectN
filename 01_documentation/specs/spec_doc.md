@@ -1,10 +1,10 @@
-# Project N by MMM
+# projectN by MMM
 
 ## Team and Project Name
 
 ### Project name:
 
-Project N
+projectN
 
 ### Our team’s name:
 
