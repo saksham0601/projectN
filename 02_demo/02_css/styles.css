@@ -156,7 +156,7 @@ body {
   border-radius: 1rem;
   background: #3f3f4e;
   width: 260px;
-  height: 78.5vh;
+  height: 78vh;
   margin-top: 3rem;
   margin-bottom: 40px;
   overflow-y: auto;
@@ -190,11 +190,19 @@ body {
   border: 1px solid;
   opacity: 50%;
 }
+.sidebar-list-note-chap svg {
+  padding: 0 0.2rem 0 1rem;
+  fill: white;
+}
+.sidebar-list-note-chap i {
+  transform: rotate(-90deg);
+}
 .sidebar-list li {
   list-style: none;
 }
 .sidebar-list svg {
   padding: 0 0.2rem 0 1rem;
+  fill: white;
 }
 .sidebar-list-quick {
   position: relative;
@@ -433,7 +441,7 @@ body {
   border-radius: 1rem;
   background: white;
   width: 260px;
-  height: 78.5vh;
+  height: 78vh;
   margin-top: 3rem;
   margin-bottom: 40px;
   overflow-y: auto;
@@ -467,11 +475,15 @@ body {
   border: 1px solid;
   opacity: 50%;
 }
+.light-mode .sidebar-list-note-chap i {
+  transform: rotate(-90deg);
+}
 .light-mode .sidebar-list li {
   list-style: none;
 }
 .light-mode .sidebar-list svg {
   padding: 0 0.2rem 0 1rem;
+  fill: black;
 }
 .light-mode .sidebar-list-quick {
   position: relative;
