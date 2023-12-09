@@ -158,9 +158,13 @@ For the most part, we are using Google standards for the physical design of the 
 
 ### Programming language(s) and any supporting tools to be used
 
-- In the beginning phases of the projectN, Vanilla JavaScript will be used, aiming to integrate the next.js framework as the project progresses.
+- In the beginning phases of the projectN, Vanilla JavaScript will be used with a few external libraries, aiming to integrate the next.js framework as the project progresses.
+- External libraries used for JS:
+    - https://github.com/markedjs/marked
+    - http://purl.eligrey.com/github/FileSaver.js
 - HTML
 - For the style we are using CSS with the extension Sassy CSS (SCSS).
+- For icons we used Boxicons icon library(https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css)
 - Selenium to automate the testing process.
 - An external server to host. 
 
@@ -170,42 +174,25 @@ According to Google Style, file names must be all lowercase and may include unde
 
 ### File Structure
 
+The file structure contains mainly two folders, 01_documentation and 02_projectN. If any folder requires additional tools to assist its main purpose, a new folder is added within and given an appropriate name that explains its purpose, for example, images folder containing images called "imgs".
+
 #### 01_documentation
 
 This folder contains all necessary documentation regarding functionality, standards and other relevant information. 
 
-#### 02_programm_projectN
+#### 02_projectN
 
-##### Assets
+This folder contains the main application and its components. It is spilt into two folders, "01_scripts" and "02_css". It contains all the HTML files.
 
-This folder contains all the subfolders containing all the graphical interface assets:
+##### 01_scripts
 
-- Fonts
-- Images
-- Icons
-- Styles
+The back-end is going to use a single folder called scripts in the projectN folder storing all the JavaScript files responsible for the functionality of projectN.
 
-##### Components
+##### 02_styles
 
-This folders contains all the subfolders for functionality:
+This folder is responsible for the entire front-end. It contains all the css style files and any external icons, formats or sytles used, and also contains any JavaScript files used for the front-end.
 
-- Buttons
-- navbar
-- hover menus
-- main menus
-- errors
+### Interface for all public services provided by the element:
 
-##### back_end
-
-This folder is split in two, there is "helpers" & "features". "features" has sub directories that contains different features that will run the actual program. "helpers" is going to contain all the basic programs to perform small tasks that might be called by multiple files. 
-
-
-### Implementation method for each shared data store (database, file, etc)
-(including format, fields, layout)
-
-### interface for all public services provided by the element:
-
-- publicly accessible data types and constants
-- publicly callable function names, return types, parameter lists
-- class names, public field names/types, public method names, parameters, return types
+All elements in the HTML documents are freely accessible by all front-end and back-end files by their respective IDs.
 
