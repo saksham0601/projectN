@@ -277,13 +277,13 @@ body {
     }
 }
 
-.flashcardForm {
+.flashcard-form {
     display: flex;
     justify-content: center;
     margin: 20px;
 }
 
-.flashcardForm input[type="text"] {
+.flashcard-form input[type="text"] {
     background-color: #31313f;
     box-shadow: 0 0 10px #1C1C23;
     color: white;
@@ -293,7 +293,7 @@ body {
     border-radius: 5px;
 }
 
-.flashcardForm button {
+.flashcard-form button {
     background-color: #31313f;
     box-shadow: 0 0 10px #1C1C23;
     color: white;
@@ -371,6 +371,7 @@ body {
 
 // css for the js function to switch to light mode
 .light-mode {
+
     .nav {
         position: fixed;
         background-color: white;
@@ -553,13 +554,13 @@ body {
         }
     }
 
-    .flashcardForm {
+    .flashcard-form {
         display: flex;
         justify-content: center;
         margin: 20px;
     }
 
-    .flashcardForm input[type="text"] {
+    .flashcard-form input[type="text"] {
         background-color: white;
         box-shadow: 0 0 10px lightgray;
         color: black;
@@ -569,7 +570,7 @@ body {
         border-radius: 5px;
     }
 
-    .flashcardForm button {
+    .flashcard-form button {
         background-color: white;
         box-shadow: 0 0 10px lightgray;
         color: black;

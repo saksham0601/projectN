@@ -27,8 +27,11 @@
                     </button>
                     <button><li>Save Copy</li></button>
                     <button type="button" onclick="newDocument()"><li>New</li></button>
-                    <button onclick="document.getElementById('fileInput').click();">
+                    <!-- This calls the input tag with id 'file-input' -->
+                    <button onclick="document.getElementById('file-input').click();">
                         <li style="text-align: left;">Open</li>
+                        <!-- used to choose a file from your pc which is then read by the open button -->
+                        <input type="file" id="file-input" style="display: none;" onchange="readFile()" />
                     </button>
                     <li><button>Save Copy</button></li>
                     <li><button>Open Recent</button></li>
@@ -68,9 +71,11 @@
     <div class="sidebar" id="sidebar">
         <div class="sidebar-list">
             <div class="sidebar-list-note">
+                <!-- dropdown icon -->
                 <i class='bx bxs-down-arrow'></i>
                 <?xml version="1.0" ?>
                 <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                <!-- Notebook icon vector -->
                 <svg enable-background="new 0 0 48 48" height="1rem" version="1.1" viewBox="0 0 48 48" width="1rem"
                     xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <g id="Expanded">
@@ -117,28 +122,27 @@
                 </svg>
                 Notebooks
                 <hr class="a">
+                <!-- Example placeholder -->
                 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp CSCI 265
                 <hr class="b">
                 <ul class="sidebar-list-note-chap">
                     <li>
+                        <!-- dropdown icon -->
                         <i class='bx bxs-down-arrow'></i>
                         Chapters
-                        <!-- <ul class="sidebar-list-note-chap-pages">
-                            <li>
-                                Pages
-                            </li>
-                        </ul> -->
                     </li>
                 </ul>
             </div>
             <div class="sidebar-list-quick">
-                <?xml version="1.0" ?><svg height="1.2rem" viewBox="0 0 1792 1792" width="1.2rem" xmlns="http://www.w3.org/2000/svg"><path d="M1528 1280h-248v248q29-10 41-22l185-185q12-12 22-41zm-280-128h288v-896h-1280v1280h896v-288q0-40 28-68t68-28zm416-928v1024q0 40-20 88t-48 76l-184 184q-28 28-76 48t-88 20h-1024q-40 0-68-28t-28-68v-1344q0-40 28-68t68-28h1344q40 0 68 28t28 68z"/></svg>
+                <?xml version="1.0" ?>
+                <!-- quicknotes icon vector -->
+                <svg height="1.2rem" viewBox="0 0 1792 1792" width="1.2rem" xmlns="http://www.w3.org/2000/svg"><path d="M1528 1280h-248v248q29-10 41-22l185-185q12-12 22-41zm-280-128h288v-896h-1280v1280h896v-288q0-40 28-68t68-28zm416-928v1024q0 40-20 88t-48 76l-184 184q-28 28-76 48t-88 20h-1024q-40 0-68-28t-28-68v-1344q0-40 28-68t68-28h1344q40 0 68 28t28 68z"/></svg>
                 QuickNotes
             </div>
         </div>
     </div>
     <div id="app">
-        <textarea id="noteInput" maxlength="500,000" placeholder="Start typing in Markdown..."></textarea>
+        <textarea id="noteInput" placeholder="Start typing in Markdown..."></textarea>
         <div id="note-display"></div>
     </div>
 
@@ -153,8 +157,6 @@
             <button onclick="applyUnderline()">U</button>
         </div>
     </div>
-    <!-- used to choose a file from your pc which is then read by the open button -->
-    <input type="file" id="fileInput" style="display: none;" onchange="readFile()" />
     <script src="01_scripts/text.js"></script>
     <script src="01_scripts/script.js"></script>
     <script src="01_scripts/shortcuts.js"></script>

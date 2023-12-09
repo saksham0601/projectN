@@ -2,15 +2,21 @@
 
 ## How to use projectN
 
+projectN is an easy to use note-taking web-app. You simply load the website and start typing in the given space with a live renderer right next to the input area. All the features are easily accessible from the drop-down menus on the navigation bar at the top and some basic formatting buttons at the bottom.
+
 ### Features
+
 - Taking notes in extended markdown and saving them locally
 - Opening markdown files from your local drive onto to the web-app
 - Creating a set of flashcards
 - Light mode and dark mode
+- Format selected text either by using the provided buttons or shortcuts
 - You can use basic formatting shortcuts
 - Clean and uncluttered user interface
+- Live rendering of markdown text
 
 ### Rules
+
 - Standard markdown rules for formatting
 - Character count must not exceed 500,000 characters
 - Import files only in .md and .txt format
