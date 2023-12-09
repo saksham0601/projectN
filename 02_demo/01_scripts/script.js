@@ -15,6 +15,7 @@ function chooseFile() {
 
 }
 
+
 function readFile() {
     // Get the input element
     chooseFile();
@@ -202,4 +203,4 @@ document.addEventListener('DOMContentLoaded', function () {
     if (savedTheme) {
         changeTheme(savedTheme);
     }
-}); 
+});

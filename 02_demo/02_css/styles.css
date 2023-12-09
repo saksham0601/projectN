@@ -25,7 +25,7 @@ textarea {
   /* Disable textarea resizing */
 }
 
-#note-display {
+#noteDisplay {
   width: 48%;
   min-height: 75vh;
   padding: 10px;
@@ -660,3 +660,50 @@ a {
   border-radius: 0.5rem;
   padding: 0.25rem 0.5rem;
 }/*# sourceMappingURL=styles.css.map */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: #66668a;
+  width: 350px;
+  height: 100px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-body {
+  padding: 10px 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+  z-index: 4;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-button {
+  justify-content: center;
+  
+}
