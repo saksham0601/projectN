@@ -1,4 +1,4 @@
-# Updates Document Phase 4
+# Updates Document Phase 5
 
 In this phase our main focus was testing and how we are going to go about it. According to our teams initial play of having an automated testing system, we will be using Selenium as an external tool to achieve this goal.
 
