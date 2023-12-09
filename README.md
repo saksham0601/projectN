@@ -5,4 +5,4 @@ This  is the start of something great
 
 ## Build Instructions
 
-If you have VS Code installed, you can simply install the [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) & open index.html from the 02_demo folder through it. 
+If you have VS Code installed, you can simply install the [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) & open index.html from the 02_demo folder through it.
