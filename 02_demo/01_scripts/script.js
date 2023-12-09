@@ -9,17 +9,11 @@ function saveFile() {
     }
 }
 
-function chooseFile() {
-
-    document.getElementById('fileInput').click();
-
-}
-
-
+// This function reads a file from the user's local storage
+// It was fully implemented with the use of ChatGPT
 function readFile() {
     // Get the input element
-    chooseFile();
-    var fileInput = document.getElementById('fileInput');
+    var fileInput = document.getElementById('file-input');
 
     // Check if a file is selected
     if (fileInput.files.length > 0) {
@@ -45,6 +39,7 @@ function readFile() {
 
 }
 
+
 function newDocument() {
     // Get the current content of the document
     let content = document.getElementById("noteInput").value;
@@ -54,9 +49,9 @@ function newDocument() {
         // Ask the user if they want to save the current document
         let save = confirm("Do you want to save the current document?");
 
-        // If the user chooses to save
+        // If the user chooses to save calls saveFile()
         if (save) {
-            saveFile(); // Save the current document
+            saveFile();
         }
     }
 
@@ -65,31 +60,23 @@ function newDocument() {
     document.getElementById("note-display").innerText = '';
 }
 
+// This functions toggles the sidebar when you hover over the the left edge of the screen
 document.addEventListener('DOMContentLoaded', function () {
-    const sidebarToggle = document.getElementById('sidebar');
     const sidebar = document.getElementById('sidebar');
 
-    sidebarToggle.addEventListener('mouseover', function () {
-        sidebar.style.transform = "translateX(0%)";
-    });
-
+    //This function keeps the sidebar visible when the mouse is over it
     sidebar.addEventListener('mouseover', function () {
         sidebar.style.transform = "translateX(0%)";
     });
 
-    sidebarToggle.addEventListener('mouseout', function () {
+    //This function keeps closes the sidebar when the mouse leaves the sidebar area
+    sidebar.addEventListener('mouseout', function () {
         if (!isMouseOverElement(sidebar) && !isCursorNearLeftEdge()) {
             sidebar.style.transform = "translateX(-100%)";
         }
     });
 
-    sidebar.addEventListener('mouseout', function () {
-        if (!isMouseOverElement(sidebarToggle) && !isCursorNearLeftEdge()) {
-            sidebar.style.transform = "translateX(-100%)";
-        }
-    });
-
-    // to find if the mouse was over the element chatGPT was used to write this function
+    // helper function to find if the mouse was over an element chatGPT was used to write this function
     function isMouseOverElement(element) {
         const rect = element.getBoundingClientRect();
         return (
@@ -99,27 +86,9 @@ document.addEventListener('DOMContentLoaded', function () {
             event.clientY <= rect.bottom
         );
     }
-    // made using chatGPT
+    // made using chatGPT to check if cursor is near the left edge of the user's browser window
     function isCursorNearLeftEdge() {
-        const threshold = 20;
+        const threshold = 10;
         return event.clientX <= threshold;
-    }
-});
-
-// Save selected theme to localStorage
-function saveTheme(theme) {
-    localStorage.setItem('selectedTheme', theme);
-}
-
-// Retrieve selected theme from localStorage
-function getSavedTheme() {
-    return localStorage.getItem('selectedTheme');
-}
-
-// Apply the saved theme on page load
-document.addEventListener('DOMContentLoaded', function () {
-    const savedTheme = getSavedTheme();
-    if (savedTheme) {
-        changeTheme(savedTheme);
     }
 });

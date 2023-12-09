@@ -236,13 +236,13 @@ body {
   padding: 0.25rem 0.5rem;
 }
 
-.flashcardForm {
+.flashcard-form {
   display: flex;
   justify-content: center;
   margin: 20px;
 }
 
-.flashcardForm input[type=text] {
+.flashcard-form input[type=text] {
   background-color: #31313f;
   box-shadow: 0 0 10px #1C1C23;
   color: white;
@@ -252,7 +252,7 @@ body {
   border-radius: 5px;
 }
 
-.flashcardForm button {
+.flashcard-form button {
   background-color: #31313f;
   box-shadow: 0 0 10px #1C1C23;
   color: white;
@@ -487,12 +487,12 @@ body {
 .light-mode .sidebar-list-quick {
   position: relative;
 }
-.light-mode .flashcardForm {
+.light-mode .flashcard-form {
   display: flex;
   justify-content: center;
   margin: 20px;
 }
-.light-mode .flashcardForm input[type=text] {
+.light-mode .flashcard-form input[type=text] {
   background-color: white;
   box-shadow: 0 0 10px lightgray;
   color: black;
@@ -501,7 +501,7 @@ body {
   border: none;
   border-radius: 5px;
 }
-.light-mode .flashcardForm button {
+.light-mode .flashcard-form button {
   background-color: white;
   box-shadow: 0 0 10px lightgray;
   color: black;

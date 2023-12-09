@@ -1,8 +1,9 @@
+// Getting the input area and display area as a const
+const noteInput = document.getElementById("noteInput");
+const noteDisplay = document.getElementById("note-display");
+
 // Markdown implementation was done with the help of ChatGPT
 document.addEventListener('DOMContentLoaded', () => {
-  const noteInput = document.getElementById("noteInput");
-  const noteDisplay = document.getElementById("note-display");
-
   // Custom renderer to handle ==highlighted text==
   const renderer = new marked.Renderer();
   const originalRenderer = renderer.paragraph;
@@ -30,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Formatting function that applies bold to a text if select or adds the markdown syntax
+// at the cursor position
 function applyBold() {
   var selectedText = window.getSelection().toString();
   var startPos = noteInput.selectionStart;
@@ -38,25 +41,28 @@ function applyBold() {
   if(!selectedText){
     // Insert the bold syntax at the current cursor position
     noteInput.value = noteInput.value.substring(0, startPos) + '****' + noteInput.value.substring(endPos);
+    
+    // Puts the cursor in the middle of the syntax
     noteInput.selectionStart = startPos + 2;
     noteInput.selectionEnd = startPos + 2;
-    
     noteInput.focus();
   }
 
   if (selectedText) {
+    // removes bold formatting from the selected text if it is bolded
     if (selectedText.startsWith("**") && selectedText.endsWith("**")) {
-      var formattedText = selectedText.substring(1, selectedText.length - 1);
+      var formattedText = selectedText.substring(2, selectedText.length - 2);
       replaceSelection(formattedText);
     }
+    // adds bold syntax around the selected text
     else {
       var formattedText = "**" + selectedText + "**";
       replaceSelection(formattedText);
     }
 
+    // puts the cursor position after the formatting
     noteInput.selectionStart = startPos + formattedText.length;
     noteInput.selectionEnd = startPos + formattedText.length;
-
     noteInput.focus();
   } 
 }
@@ -68,12 +74,10 @@ function applyItalic() {
   var endPos = noteInput.selectionEnd;
 
   if(!selectedText){
-    // Insert the itlaics syntax at the current cursor position
     noteInput.value = noteInput.value.substring(0, startPos) + '**' + noteInput.value.substring(endPos);
 
     noteInput.selectionStart = startPos + 1;
-    noteInput.selectionEnd = startPos + 1;
-    
+    noteInput.selectionEnd = startPos + 1; 
     noteInput.focus();
   }
 
@@ -89,24 +93,21 @@ function applyItalic() {
 
     noteInput.selectionStart = startPos + formattedText.length;
     noteInput.selectionEnd = startPos + formattedText.length;
-
     noteInput.focus();
   }
 }
 
-// funtion still under work
+// funtion still under work as for now it uses HTML tags to put underline formatting
 function applyUnderline() {
   var selectedText = window.getSelection().toString();
   var startPos = noteInput.selectionStart;
   var endPos = noteInput.selectionEnd;
 
   if(!selectedText){
-    // Insert the bold symbols at the current cursor position
     noteInput.value = noteInput.value.substring(0, startPos) + '<u>' + selectedText + '</u>' + noteInput.value.substring(endPos);
     
     noteInput.selectionStart = startPos + 3;
-    noteInput.selectionEnd = startPos + selectedText.length + 3;
-    
+    noteInput.selectionEnd = startPos + selectedText.length + 3; 
     noteInput.focus();
   }
   if (selectedText) {
@@ -121,7 +122,6 @@ function applyUnderline() {
 
     noteInput.selectionStart = startPos + formattedText.length;
     noteInput.selectionEnd = startPos + formattedText.length;
-
     noteInput.focus();
   }  
 }
@@ -137,8 +137,7 @@ function applyHighlight() {
     noteInput.value = noteInput.value.substring(0, startPos) + '====' + noteInput.value.substring(endPos);
 
     noteInput.selectionStart = startPos + 2;
-    noteInput.selectionEnd = startPos + 2;
-    
+    noteInput.selectionEnd = startPos + 2;   
     noteInput.focus();
   }
 
@@ -154,7 +153,6 @@ function applyHighlight() {
 
     noteInput.selectionStart = startPos + formattedText.length;
     noteInput.selectionEnd = startPos + formattedText.length;
-
     noteInput.focus();
   }
 }
@@ -163,14 +161,10 @@ function applyHighlight() {
 function replaceSelection(replacement) {
   var textBox = document.getElementById("noteInput");
 
-  // Get the start and end positions of the selected text
-  // Had to use a bit of chatGPT to figure out the syntax for these 2 lines
-  var startPos = textBox.selectionStart;
-  var endPos = textBox.selectionEnd;
-
   // Get the text before and after the selected text
-  var textBefore = textBox.value.substring(0, startPos);
-  var textAfter = textBox.value.substring(endPos, textBox.value.length);
+  // Had to use a bit of chatGPT to figure out the syntax for these 2 lines
+  var textBefore = textBox.value.substring(0, textBox.selectionStart);
+  var textAfter = textBox.value.substring(textBox.selectionEnd, textBox.value.length);
 
   // Set the value of the textBox with the selected text removed
   textBox.value = textBefore + replacement + textAfter;
