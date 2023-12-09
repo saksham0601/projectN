@@ -22,8 +22,11 @@
 - Install [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 - Fork our git repository to your computer
 - Open the repository in VS code
-- Go to 02_demo/index.html
-- Click on the "Go Live" icon at the bottom right of your VS Code as seen in the image below.
+- In the file explorer go to 02_demo/index.html(see image below)
+
+![demo_folder](imgs/demo_folder.png)
+
+- Click on the "Go Live" icon at the bottom right of your VS Code(see image below)
 
 ![live_server](imgs/live_server.png)
 
