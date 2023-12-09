@@ -73,9 +73,9 @@ body {
 .nav {
     position: fixed;
     background-color: #31313f;
-    width: 100rem;
+    width: 110vw;
     height: 60px;
-    margin: -2rem;
+    margin: -2rem 0 -2rem -2rem;
     z-index: 5;
     box-shadow: 0 0 10px #1C1C23;
 
@@ -202,19 +202,12 @@ body {
             margin-bottom: 30vh;
 
             &-chap {
-<<<<<<< Updated upstream
-
-                // later fill in with the css for inserting and viewing chapters
-                &-pages {
-                    // later fill in with the css for inserting and viewing chapter
-=======
                 svg {
                     padding: 0 0.2rem 0 1rem;
                     fill: white;
                 }
                 i{
                     transform: rotate(-90deg);
->>>>>>> Stashed changes
                 }
             }
         }
@@ -391,9 +384,9 @@ body {
     .nav {
         position: fixed;
         background-color: white;
-        width: 100rem;
+        width: 110vw;
         height: 60px;
-        margin: -2rem;
+        margin: -2rem 0 -2rem -2rem;
         z-index: 5;
         box-shadow: 0 0 10px lightgray;
 

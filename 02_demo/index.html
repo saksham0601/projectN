@@ -12,32 +12,6 @@
 </head>
 
 <body>
-
-    <div class="modal" id="modal">
-        <div class="modal-body">
-            Would you like to save the current note?
-        </div>
-        <button data-confirm-button class = "modal-button"> Yes </button>
-        <button data-close-button class="modal-button"> No </button>
-    </div>
-
-    <div class="modal" id="newDocModal">
-        <div class="modal-body">
-            Would you like to save the current note before starting a new?
-        </div>
-        <button data-confirm-button class = "modal-button"> Yes </button>
-        <button new-doc-button class="modal-button"> No </button>
-    </div>
-    
-    <div class="modal" id="noInputModal">
-        <div class="modal-body">
-            The user has not written anything!
-        </div>
-        <button new-doc-button class="modal-button"> OK </button>
-    </div>
-
-    <div id="overlay"></div>
-
     <nav class="nav">
         <ul class="nav-list">
             <div style="margin-left: 1.5rem;"><big>ℕ</big></div>
@@ -48,11 +22,11 @@
                     <button type="button" onclick="openSavePopUp();" id="saveFile">
                         <li style="text-align: left;">Save</li>
                     </button>
-                    <button data-modal-target="#modal" autocomplete="off" id="saveFile">
+                    <button type="button" onclick="saveFile()" id="saveFile">
                         <li style="text-align: left;">Save As</li>
                     </button>
                     <button><li>Save Copy</li></button>
-                    <button data-modal-target="#newDocModal" autocomplete="off"><li>New</li></button>
+                    <button type="button" onclick="newDocument()"><li>New</li></button>
                     <button onclick="document.getElementById('fileInput').click();">
                         <li style="text-align: left;">Open</li>
                     </button>
@@ -67,7 +41,7 @@
             <li class="nav-listitem">Insert
                 <ul class="nav-listitemdrop">
                     <li><button>Blank Page</button></li>
-                    <li><button>File</button></li>input
+                    <li><button>File</button></li>
                     <li><button>Image</button></li>
                 </ul>
             </li>
@@ -164,8 +138,8 @@
         </div>
     </div>
     <div id="app">
-        <textarea id="note-input" autocomplete="off" placeholder="Start typing in Markdown..."></textarea>
-        <div id="noteDisplay"></div>
+        <textarea id="noteInput" placeholder="Start typing in Markdown..."></textarea>
+        <div id="note-display"></div>
     </div>
 
     <div class="bottom-toolbar">
@@ -185,8 +159,6 @@
     <script src="01_scripts/script.js"></script>
     <script src="01_scripts/fileSaver.js"></script>
     <script src="01_scripts/shortcuts.js"></script>
-    <script src="01_scripts/popup-modals.js"></script>
-    <script src="01_scripts/image-formatting.js"></script>
 </body>
 
 </html>

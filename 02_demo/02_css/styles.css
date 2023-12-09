@@ -13,7 +13,6 @@ textarea {
   padding: 10px;
   margin-top: 2.5rem;
   font-size: 1em;
-  /* Adjust font size as needed */
   box-shadow: 0 0 10px #1C1C23;
   outline: none;
   border: none;
@@ -25,7 +24,7 @@ textarea {
   /* Disable textarea resizing */
 }
 
-#noteDisplay {
+#note-display {
   width: 48%;
   min-height: 75vh;
   padding: 10px;
@@ -60,7 +59,6 @@ button {
 }
 
 body {
-  /*find in google fonts later*/
   font-family: Arial, Helvetica, sans-serif;
   background-color: #31313f;
   color: #ffffff;
@@ -69,9 +67,9 @@ body {
 .nav {
   position: fixed;
   background-color: #31313f;
-  width: 100rem;
+  width: 110vw;
   height: 60px;
-  margin: -2rem;
+  margin: -2rem 0 -2rem -2rem;
   z-index: 5;
   box-shadow: 0 0 10px #1C1C23;
 }
@@ -87,17 +85,6 @@ body {
   list-style: none;
   margin-right: auto;
   cursor: pointer;
-  /* svg{
-
-      width: 2.5rem;
-      transition: fill 250ms ease-in;
-      &:hover, &:focus{
-          fix the hover states for logo lol aka fill
-          fill: white;
-      }
-
-
-  }*/
 }
 .nav-listitem {
   list-style: none;
@@ -141,6 +128,7 @@ body {
   transition: opacity 200ms ease-in-out;
 }
 .nav-listitemdrop li {
+  text-align: left;
   list-style: none;
   padding: 0.5rem 1rem;
   border-radius: 0.2rem;
@@ -218,6 +206,42 @@ body {
   font-size: 22px;
   color: #ffffff;
   font-weight: 600;
+}
+
+.bottom-toolbar {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  align-items: center;
+  background: #3f3f4e;
+  color: white;
+  height: 3vm;
+  /* Adjust as needed */
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  /* Add padding for better appearance */
+  width: 15vm;
+  /* Full width */
+  position: absolute;
+  left: 50%;
+  bottom: 3vm;
+  border-radius: 0.5rem;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px #1C1C23;
+}
+
+.toolbar-item-i {
+  border-radius: 0.5rem;
+  padding: 0.25rem 11px;
+  margin: 0 0.25rem 0 0;
+}
+.toolbar-item-b {
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.25rem 0 0;
+}
+.toolbar-item-u {
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .flashcardForm {
@@ -321,9 +345,9 @@ body {
 .light-mode .nav {
   position: fixed;
   background-color: white;
-  width: 100rem;
+  width: 110vw;
   height: 60px;
-  margin: -2rem;
+  margin: -2rem 0 -2rem -2rem;
   z-index: 5;
   box-shadow: 0 0 10px lightgray;
 }
@@ -339,17 +363,6 @@ body {
   list-style: none;
   margin-right: auto;
   cursor: pointer;
-  /* svg{
-
-      width: 2.5rem;
-      transition: fill 250ms ease-in;
-      &:hover, &:focus{
-          fix the hover states for logo lol aka fill
-          fill: white;
-      }
-
-
-  }*/
 }
 .light-mode .nav-listitem {
   list-style: none;
@@ -623,87 +636,4 @@ body {
 a {
   color: white;
   text-decoration: none;
-}
-
-.bottom-toolbar {
-  display: flex;
-  align-self: center;
-  justify-content: space-between;
-  align-items: center;
-  background: #3f3f4e;
-  color: white;
-  height: 3vm;
-  /* Adjust as needed */
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  /* Add padding for better appearance */
-  width: 15vm;
-  /* Full width */
-  position: absolute;
-  left: 50%;
-  bottom: 3vm;
-  border-radius: 0.5rem;
-  transform: translateX(-50%);
-  box-shadow: 0 0 10px #1C1C23;
-}
-
-.toolbar-item-i {
-  border-radius: 0.5rem;
-  padding: 0.25rem 11px;
-  margin: 0 0.25rem 0 0;
-}
-.toolbar-item-b {
-  border-radius: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  margin: 0 0.25rem 0 0;
-}
-.toolbar-item-u {
-  border-radius: 0.5rem;
-  padding: 0.25rem 0.5rem;
 }/*# sourceMappingURL=styles.css.map */
-
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: 200ms ease-in-out;
-  border-radius: 10px;
-  z-index: 10;
-  background-color: #66668a;
-  width: 350px;
-  height: 100px;
-  max-width: 80%;
-}
-
-.modal.active {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.modal-body {
-  padding: 10px 15px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
-}
-
-#overlay {
-  position: fixed;
-  opacity: 0;
-  transition: 200ms ease-in-out;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, .5);
-  pointer-events: none;
-  z-index: 4;
-}
-
-#overlay.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.modal-button {
-  justify-content: center;
-  
-}
