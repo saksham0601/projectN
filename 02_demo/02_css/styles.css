@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   max-width: 100%;
-  /* Or the max width you prefer */
   padding: 0.5rem 1rem;
 }
 
@@ -21,7 +20,6 @@ textarea {
   color: white;
   border-radius: 1rem;
   resize: none;
-  /* Disable textarea resizing */
 }
 
 #note-display {
@@ -33,11 +31,8 @@ textarea {
   box-shadow: 0 0 10px #1C1C23;
   background-color: #31313f;
   overflow-y: auto;
-  /* Adds a scrollbar if content is too long */
   font-size: 1em;
-  /* Adjust font size as needed */
   white-space: pre-wrap;
-  /* Keeps the line breaks and spacing */
   border-radius: 1rem;
 }
 
@@ -216,11 +211,8 @@ body {
   background: #3f3f4e;
   color: white;
   height: 3vm;
-  /* Adjust as needed */
   padding: 0.5rem 1rem 0.5rem 1rem;
-  /* Add padding for better appearance */
   width: 15vm;
-  /* Full width */
   position: absolute;
   left: 50%;
   bottom: 3vm;
@@ -275,7 +267,6 @@ body {
   display: flex;
   justify-content: center;
   word-wrap: break-word;
-  /* Allow words to break onto the next line */
   padding: 10px;
 }
 
@@ -420,7 +411,6 @@ body {
   padding: 10px;
   margin-top: 2.5rem;
   font-size: 1em;
-  /* Adjust font size as needed */
   box-shadow: 0 0 10px lightgray;
   outline: none;
   border: none;
@@ -429,7 +419,6 @@ body {
   color: black;
   border-radius: 1rem;
   resize: none;
-  /* Disable textarea resizing */
 }
 .light-mode #note-display {
   width: 48%;
@@ -441,11 +430,8 @@ body {
   background-color: white;
   color: black;
   overflow-y: auto;
-  /* Adds a scrollbar if content is too long */
   font-size: 1em;
-  /* Adjust font size as needed */
   white-space: pre-wrap;
-  /* Keeps the line breaks and spacing */
   border-radius: 1rem;
 }
 .light-mode .sidebar {
@@ -530,7 +516,6 @@ body {
   display: flex;
   justify-content: center;
   word-wrap: break-word;
-  /* Allow words to break onto the next line */
   padding: 10px;
 }
 .light-mode .flashcard {
@@ -594,11 +579,8 @@ body {
   background: white;
   color: black;
   height: 3vm;
-  /* Adjust as needed */
   padding: 0.5rem 1rem 0.5rem 1rem;
-  /* Add padding for better appearance */
   width: 15vm;
-  /* Full width */
   position: absolute;
   left: 50%;
   bottom: 3vm;
