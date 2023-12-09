@@ -6,22 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Note Taking App</title>
     <link rel="stylesheet" type="text/css" href="02_css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dompurify@2/dist/purify.min.js"></script>
 </head>
 
 <body>
     <nav class="nav">
-        <ul class="nav__list">
+        <ul class="nav-list">
+            <div style="margin-left: 1.5rem;"><big>ℕ</big></div>
             <p></p>
-            <li class="nav__listitem">Home</li>
-            <li class="nav__listitem">File
-                <ul class="nav__listitemdrop">
-                    <li><button type="button" onclick="saveFile();" id="saveFile">Save</button></li>
-                    <li><button type="button" onclick="saveFile();" id="saveFile">Save As</button></li>
+            <li class="nav-listitem">Home</li>
+            <li class="nav-listitem">File
+                <ul class="nav-listitemdrop">
+                    <button type="button" onclick="openSavePopUp();" id="saveFile">
+                        <li style="text-align: left;">Save</li>
+                    </button>
+                    <button type="button" onclick="saveFile()" id="saveFile">
+                        <li style="text-align: left;">Save As</li>
+                    </button>
+                    <button><li>Save Copy</li></button>
+                    <button type="button" onclick="newDocument()"><li>New</li></button>
+                    <button onclick="document.getElementById('fileInput').click();">
+                        <li style="text-align: left;">Open</li>
+                    </button>
                     <li><button>Save Copy</button></li>
-                    <li><button>New</button></li>
-                    <button onclick="document.getElementById('fileInput').click();"><li style="text-align: left;">Open</li></button>
                     <li><button>Open Recent</button></li>
                     <li><button>Page Layout</button></li>
                     <li><button>Print</button></li>
@@ -29,35 +38,123 @@
                     <li><button>Share</button></li>
                 </ul>
             </li>
-            <li class="nav__listitem">Insert
-                <ul class="nav__listitemdrop">
+            <li class="nav-listitem">Insert
+                <ul class="nav-listitemdrop">
                     <li><button>Blank Page</button></li>
                     <li><button>File</button></li>
                     <li><button>Image</button></li>
                 </ul>
             </li>
-            <li class="nav__listitem">Draw</li>
-            <li class="nav__listitem">Flashcards</li>
-            <li class="nav__listitem">Quizzes</li>
-            <li class="nav__listitem">View</li>
+            <li class="nav-listitem">Draw</li>
+            <button onclick="location.href='flashcard.html'">
+                <li class="nav-listitem">
+                    Flashcards
+                </li>
+            </button>
+            <li class="nav-listitem">Quizzes</li>
+            <li class="nav-listitem">View</li>
+            <li class="nav-listitem">Themes
+                <ul class="nav-listitemdrop">
+                    <button onclick="changeTheme('default')">
+                        <li style="text-align: left;">Default</li>
+                    </button>
+                    <button onclick="changeTheme('light')">
+                        <li style="text-align: left;">Light</li>
+                    </button>
+                </ul>
+            </li>
         </ul>
     </nav>
-    <br>
-    <br>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-list">
+            <div class="sidebar-list-note">
+                <i class='bx bxs-down-arrow'></i>
+                <?xml version="1.0" ?>
+                <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                <svg enable-background="new 0 0 48 48" height="1rem" version="1.1" viewBox="0 0 48 48" width="1rem"
+                    xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Expanded">
+                        <g>
+                            <g>
+                                <path d="M31,18H17V8h14V18z M19,16h10v-6H19V16z" />
+                            </g>
+                            <g>
+                                <path d="M41,48H5V0h36V48z M7,46h32V2H7V46z" />
+                            </g>
+                            <g>
+                                <rect height="2" width="5" x="40" y="13" />
+                            </g>
+                            <g>
+                                <rect height="2" width="5" x="40" y="21" />
+                            </g>
+                            <g>
+                                <rect height="2" width="5" x="40" y="29" />
+                            </g>
+                            <g>
+                                <path
+                                    d="M42,39h-2v-2h2c1.103,0,2-0.897,2-2V9c0-1.103-0.897-2-2-2h-2V5h2c2.206,0,4,1.794,4,4v26C46,37.206,44.206,39,42,39z" />
+                            </g>
+                            <g>
+                                <rect height="2" width="6" x="3" y="8" />
+                            </g>
+                            <g>
+                                <rect height="2" width="6" x="3" y="14" />
+                            </g>
+                            <g>
+                                <rect height="2" width="6" x="3" y="20" />
+                            </g>
+                            <g>
+                                <rect height="2" width="6" x="3" y="26" />
+                            </g>
+                            <g>
+                                <rect height="2" width="6" x="3" y="32" />
+                            </g>
+                            <g>
+                                <rect height="2" width="6" x="3" y="38" />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                Notebooks
+                <hr class="a">
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp CSCI 265
+                <hr class="b">
+                <ul class="sidebar-list-note-chap">
+                    <li>
+                        <i class='bx bxs-down-arrow'></i>
+                        Chapters
+                        <!-- <ul class="sidebar-list-note-chap-pages">
+                            <li>
+                                Pages
+                            </li>
+                        </ul> -->
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-list-quick">
+                <?xml version="1.0" ?><svg height="1.2rem" viewBox="0 0 1792 1792" width="1.2rem" xmlns="http://www.w3.org/2000/svg"><path d="M1528 1280h-248v248q29-10 41-22l185-185q12-12 22-41zm-280-128h288v-896h-1280v1280h896v-288q0-40 28-68t68-28zm416-928v1024q0 40-20 88t-48 76l-184 184q-28 28-76 48t-88 20h-1024q-40 0-68-28t-28-68v-1344q0-40 28-68t68-28h1344q40 0 68 28t28 68z"/></svg>
+                QuickNotes
+            </div>
+        </div>
+    </div>
     <div id="app">
-        <textarea id="noteInput" placeholder="Start typing in Markdown..."></textarea>
-        <div id="noteDisplay"></div>
+        <textarea id="noteInput" maxlength="500,000" placeholder="Start typing in Markdown..."></textarea>
+        <div id="note-display"></div>
     </div>
 
+    <div class="bottom-toolbar">
+        <div class="toolbar-item-b">
+            <button onclick="applyBold()">B</button>
+        </div>
+        <div class="toolbar-item-i">
+            <button onclick="applyItalic()">I</button>
+        </div>
+        <div class="toolbar-item-u">
+            <button onclick="applyUnderline()">U</button>
+        </div>
+    </div>
     <!-- used to choose a file from your pc which is then read by the open button -->
     <input type="file" id="fileInput" style="display: none;" onchange="readFile()" />
-    <button
-        style="box-shadow: 0 0 10px #1c1c1c; border-radius: 0.5rem; padding: 0.25rem 0.5rem; margin: 0.25rem 0.25rem 0rem 2rem;"
-        onclick="applyBold()">B</button>
-    <button style="box-shadow: 0 0 10px #1c1c1c; border-radius: 0.5rem; padding: 0.25rem 11px; margin-right: 0.25rem;"
-        onclick="applyItalic()">I</button>
-    <button style="box-shadow: 0 0 10px #1c1c1c; border-radius: 0.5rem; padding: 0.25rem 0.5rem; margin-right: 0.25rem;"
-        onclick="applyUnderline()">U</button>
     <script src="01_scripts/text.js"></script>
     <script src="01_scripts/script.js"></script>
     <script src="01_scripts/fileSaver.js"></script>

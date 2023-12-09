@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard App</title>
+    <link rel="stylesheet" href="02_css/styles.css">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <ul class="nav-list">
+            <div style="margin-left: 1.5rem;"><big>ℕ</big></div>
+            <p></p>
+            <li class="nav-listitem">Home</li>
+            <button onclick="location.href='index.html'">
+            <li class="nav-listitem">
+       Notes
+            </li>
+            </button>
+            <li class="nav-listitem">Flashcards</li>
+            <li class="nav-listitem">Quizzes</li>
+            <li class="nav-listitem">View</li>
+            <li class="nav-listitem">Themes
+                <ul class="nav-listitemdrop">
+                    <button onclick="changeTheme('default')">
+                        <li style="text-align: left;">Default</li>
+                    </button>
+                    <button onclick="changeTheme('light')">
+                        <li style="text-align: left;">Light</li>
+                    </button>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <div class="flashcardForm">
+        <input type="text" id="question" placeholder="Enter question">
+        <input type="text" id="answer" placeholder="Enter answer">
+        <button id="addCard">Add Flashcard</button>
+    </div>
+
+    <div class="navigation">
+        <button id="prevButton">&lt</button>
+        <button id="nextButton">&gt</button>
+    </div>
+
+    <div class="flashcard-container"></div>
+
+    <script src="01_scripts/flashcard.js"></script>
+    <script src="01_scripts/script.js"></script>
+</body>
+
+</html>

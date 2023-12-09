@@ -2,37 +2,40 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  max-width: 100%; /* Or the max width you prefer */
+  max-width: 100%;
   padding: 0.5rem 1rem;
 }
 
 textarea {
   width: 48%;
-  min-height: 78vh;
+  min-height: 80vh;
   padding: 10px;
-  font-size: 1em; /* Adjust font size as needed */
+  margin-top: 2.5rem;
+  font-size: 1em;
   box-shadow: 0 0 10px #1C1C23;
   outline: none;
   border: none;
+  z-index: 0;
   background-color: #31313f;
   color: white;
   border-radius: 1rem;
-  resize: none; /* Disable textarea resizing */
+  resize: none;
 }
 
-#noteDisplay {
+#note-display {
   width: 48%;
-  min-height: 78vh;
+  min-height: 80vh;
   padding: 10px;
+  margin-top: 2.5rem;
+  z-index: 0;
   box-shadow: 0 0 10px #1C1C23;
   background-color: #31313f;
-  overflow-y: auto; /* Adds a scrollbar if content is too long */
-  font-size: 1em; /* Adjust font size as needed */
-  white-space: pre-wrap; /* Keeps the line breaks and spacing */
+  overflow-y: auto;
+  font-size: 1em;
+  white-space: pre-wrap;
   border-radius: 1rem;
 }
 
-/* color variables*/
 /* border radius*/
 * *::before,
 *::after {
@@ -51,7 +54,6 @@ button {
 }
 
 body {
-  /*find in google fonts later*/
   font-family: Arial, Helvetica, sans-serif;
   background-color: #31313f;
   color: #ffffff;
@@ -60,13 +62,13 @@ body {
 .nav {
   position: fixed;
   background-color: #31313f;
-  width: 100rem;
+  width: 110vw;
   height: 60px;
-  margin: -2rem;
-  opacity: 90%;
+  margin: -2rem 0 -2rem -2rem;
+  z-index: 5;
   box-shadow: 0 0 10px #1C1C23;
 }
-.nav__list {
+.nav-list {
   display: flex;
   float: left;
   justify-content: flex-start;
@@ -74,23 +76,12 @@ body {
   gap: 1rem;
   padding: 0 1rem;
 }
-.nav__listlogo {
+.nav-listlogo {
   list-style: none;
   margin-right: auto;
   cursor: pointer;
-  /* svg{
-
-      width: 2.5rem;
-      transition: fill 250ms ease-in;
-      &:hover, &:focus{
-          fix the hover states for logo lol aka fill
-          fill: white;
-      }
-
-
-  }*/
 }
-.nav__listitem {
+.nav-listitem {
   list-style: none;
   position: relative;
   padding: 1rem 1rem;
@@ -98,7 +89,7 @@ body {
   margin-right: auto;
   /*pseudo elements*/
 }
-.nav__listitem::after {
+.nav-listitem::after {
   content: "";
   width: 0;
   height: 0.03rem;
@@ -109,14 +100,14 @@ body {
   background-color: white;
   transition: width 200ms ease-in-out;
 }
-.nav__listitem:hover::after, .nav__listitem:focus::after {
+.nav-listitem:hover::after, .nav-listitem:focus::after {
   width: 80%;
 }
-.nav__listitem:hover ul, .nav__listitem:focus ul {
+.nav-listitem:hover ul, .nav-listitem:focus ul {
   opacity: 1;
   visibility: visible;
 }
-.nav__listitemdrop {
+.nav-listitemdrop {
   position: absolute;
   top: 2.7rem;
   left: 1rem;
@@ -131,12 +122,500 @@ body {
   visibility: hidden;
   transition: opacity 200ms ease-in-out;
 }
-.nav__listitemdrop li {
+.nav-listitemdrop li {
+  text-align: left;
   list-style: none;
   padding: 0.5rem 1rem;
   border-radius: 0.2rem;
   transition: #31313f 200ms ease-in-out;
 }
-.nav__listitemdrop li:hover, .nav__listitemdrop li:focus {
+.nav-listitemdrop li:hover, .nav-listitemdrop li:focus {
   background-color: #31313D;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 3;
+  border-radius: 1rem;
+  background: #3f3f4e;
+  width: 260px;
+  height: 78vh;
+  margin-top: 3rem;
+  margin-bottom: 40px;
+  overflow-y: auto;
+  overflow-x: auto;
+  transition: 0.5s;
+  transform: translateX(-100%);
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 0 0 10px #1C1C23;
+}
+.sidebar-list {
+  padding-left: 1rem;
+  flex: 1;
+}
+.sidebar-list-note {
+  position: relative;
+  margin-top: 3vh;
+  margin-bottom: 30vh;
+}
+.sidebar-list-note hr.a {
+  width: 80%;
+  margin-top: 0rem;
+  margin-left: 2rem;
+  border: 1px solid;
+  opacity: 50%;
+}
+.sidebar-list-note hr.b {
+  width: 70%;
+  margin-top: 0rem;
+  margin-left: 3rem;
+  border: 1px solid;
+  opacity: 50%;
+}
+.sidebar-list-note-chap svg {
+  padding: 0 0.2rem 0 1rem;
+  fill: white;
+}
+.sidebar-list-note-chap i {
+  transform: rotate(-90deg);
+}
+.sidebar-list li {
+  list-style: none;
+}
+.sidebar-list svg {
+  padding: 0 0.2rem 0 1rem;
+  fill: white;
+}
+.sidebar-list-quick {
+  position: relative;
+}
+
+.sidebar .logo i {
+  font-size: 30px;
+  color: #ffffff;
+  padding: 0.35rem 0 0 0.35rem;
+}
+
+.sidebar .logo .logo_name {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.bottom-toolbar {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  align-items: center;
+  background: #3f3f4e;
+  color: white;
+  height: 3vm;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  width: 15vm;
+  position: absolute;
+  left: 50%;
+  bottom: 3vm;
+  border-radius: 0.5rem;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px #1C1C23;
+}
+
+.toolbar-item-i {
+  border-radius: 0.5rem;
+  padding: 0.25rem 11px;
+  margin: 0 0.25rem 0 0;
+}
+.toolbar-item-b {
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.25rem 0 0;
+}
+.toolbar-item-u {
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.flashcardForm {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.flashcardForm input[type=text] {
+  background-color: #31313f;
+  box-shadow: 0 0 10px #1C1C23;
+  color: white;
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.flashcardForm button {
+  background-color: #31313f;
+  box-shadow: 0 0 10px #1C1C23;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.flashcard-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  word-wrap: break-word;
+  padding: 10px;
+}
+
+.flashcard {
+  background-color: #31313f;
+  box-shadow: 0 0 10px #1C1C23;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 300px;
+  min-height: 150px;
+  word-wrap: break-word;
+  margin: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.navigation button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #31313f;
+  box-shadow: 0 0 10px #1C1C23;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+/* Positioning the flashcard between navigation buttons */
+.navigation button:first-child {
+  margin-right: 20px;
+}
+
+.navigation button:last-child {
+  margin-left: 20px;
+}
+
+/* Hide the flashcards initially */
+.flashcard {
+  display: none;
+}
+
+/* Style for the currently active flashcard */
+.flashcard.active {
+  display: block;
+}
+
+.light-mode {
+  /* Positioning the flashcard between navigation buttons */
+  /* Hide the flashcards initially */
+  /* Style for the currently active flashcard */
+}
+.light-mode .nav {
+  position: fixed;
+  background-color: white;
+  width: 110vw;
+  height: 60px;
+  margin: -2rem 0 -2rem -2rem;
+  z-index: 5;
+  box-shadow: 0 0 10px lightgray;
+}
+.light-mode .nav-list {
+  display: flex;
+  float: left;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+.light-mode .nav-listlogo {
+  list-style: none;
+  margin-right: auto;
+  cursor: pointer;
+}
+.light-mode .nav-listitem {
+  list-style: none;
+  position: relative;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  margin-right: auto;
+  /*pseudo elements*/
+}
+.light-mode .nav-listitem::after {
+  content: "";
+  width: 0;
+  height: 0.03rem;
+  border-radius: 0.2rem;
+  position: absolute;
+  left: 1rem;
+  bottom: 0.8rem;
+  background-color: black;
+  transition: width 200ms ease-in-out;
+}
+.light-mode .nav-listitem:hover::after, .light-mode .nav-listitem:focus::after {
+  width: 80%;
+}
+.light-mode .nav-listitem:hover ul, .light-mode .nav-listitem:focus ul {
+  opacity: 1;
+  visibility: visible;
+}
+.light-mode .nav-listitemdrop {
+  position: absolute;
+  top: 2.7rem;
+  left: 1rem;
+  box-shadow: 0 0 10px lightgrey;
+  background-color: white;
+  width: 10rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease-in-out;
+}
+.light-mode .nav-listitemdrop li {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  transition: lightgray 200ms ease-in-out;
+}
+.light-mode .nav-listitemdrop li:hover, .light-mode .nav-listitemdrop li:focus {
+  background-color: lightgray;
+}
+.light-mode textarea {
+  width: 48%;
+  min-height: 80vh;
+  padding: 10px;
+  margin-top: 2.5rem;
+  font-size: 1em;
+  box-shadow: 0 0 10px lightgray;
+  outline: none;
+  border: none;
+  z-index: 0;
+  background-color: white;
+  color: black;
+  border-radius: 1rem;
+  resize: none;
+}
+.light-mode #note-display {
+  width: 48%;
+  min-height: 80vh;
+  padding: 10px;
+  margin-top: 2.5rem;
+  z-index: 0;
+  box-shadow: 0 0 10px lightgray;
+  background-color: white;
+  color: black;
+  overflow-y: auto;
+  font-size: 1em;
+  white-space: pre-wrap;
+  border-radius: 1rem;
+}
+.light-mode .sidebar {
+  position: fixed;
+  z-index: 3;
+  border-radius: 1rem;
+  background: white;
+  width: 260px;
+  height: 78vh;
+  margin-top: 3rem;
+  margin-bottom: 40px;
+  overflow-y: auto;
+  overflow-x: auto;
+  transition: 0.5s;
+  transform: translateX(-100%);
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 0 0 10px lightgrey;
+}
+.light-mode .sidebar-list {
+  padding-left: 1rem;
+  flex: 1;
+}
+.light-mode .sidebar-list-note {
+  position: relative;
+  margin-top: 3vh;
+  margin-bottom: 30vh;
+}
+.light-mode .sidebar-list-note hr.a {
+  width: 80%;
+  margin-top: 0rem;
+  margin-left: 2rem;
+  border: 1px solid;
+  opacity: 50%;
+}
+.light-mode .sidebar-list-note hr.b {
+  width: 70%;
+  margin-top: 0rem;
+  margin-left: 3rem;
+  border: 1px solid;
+  opacity: 50%;
+}
+.light-mode .sidebar-list-note-chap i {
+  transform: rotate(-90deg);
+}
+.light-mode .sidebar-list li {
+  list-style: none;
+}
+.light-mode .sidebar-list svg {
+  padding: 0 0.2rem 0 1rem;
+  fill: black;
+}
+.light-mode .sidebar-list-quick {
+  position: relative;
+}
+.light-mode .flashcardForm {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.light-mode .flashcardForm input[type=text] {
+  background-color: white;
+  box-shadow: 0 0 10px lightgray;
+  color: black;
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.light-mode .flashcardForm button {
+  background-color: white;
+  box-shadow: 0 0 10px lightgray;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.light-mode .flashcard-container {
+  color: black;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  word-wrap: break-word;
+  padding: 10px;
+}
+.light-mode .flashcard {
+  background-color: white;
+  box-shadow: 0 0 10px lightgrey;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 300px;
+  min-height: 150px;
+  word-wrap: break-word;
+  margin: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.light-mode .navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.light-mode .navigation button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 10px lightgray;
+  color: black;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+.light-mode .navigation button:first-child {
+  margin-right: 20px;
+}
+.light-mode .navigation button:last-child {
+  margin-left: 20px;
+}
+.light-mode .flashcard {
+  display: none;
+}
+.light-mode .flashcard.active {
+  display: block;
+}
+.light-mode #addCard {
+  background-color: white;
+  box-shadow: 0 0 10px lightgray;
+  color: black;
+}
+.light-mode .bottom-toolbar {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  color: black;
+  height: 3vm;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  width: 15vm;
+  position: absolute;
+  left: 50%;
+  bottom: 3vm;
+  border-radius: 0.5rem;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px lightgray;
+}
+.light-mode .toolbar-item-i {
+  border-radius: 0.5rem;
+  padding: 0.25rem 11px;
+  margin: 0 0.25rem 0 0;
+}
+.light-mode .toolbar-item-b {
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.25rem 0 0;
+}
+.light-mode .toolbar-item-u {
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.sidebar .logo i {
+  font-size: 30px;
+  color: #ffffff;
+  padding: 0.35rem 0 0 0.35rem;
+}
+
+.sidebar .logo .logo_name {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }/*# sourceMappingURL=styles.css.map */
