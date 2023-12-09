@@ -9,7 +9,7 @@
 
 textarea {
   width: 48%;
-  min-height: 75vh;
+  min-height: 80vh;
   padding: 10px;
   margin-top: 2.5rem;
   font-size: 1em;
@@ -26,7 +26,7 @@ textarea {
 
 #note-display {
   width: 48%;
-  min-height: 75vh;
+  min-height: 80vh;
   padding: 10px;
   margin-top: 2.5rem;
   z-index: 0;
@@ -416,7 +416,7 @@ body {
 }
 .light-mode textarea {
   width: 48%;
-  min-height: 75vh;
+  min-height: 80vh;
   padding: 10px;
   margin-top: 2.5rem;
   font-size: 1em;
@@ -433,7 +433,7 @@ body {
 }
 .light-mode #note-display {
   width: 48%;
-  min-height: 75vh;
+  min-height: 80vh;
   padding: 10px;
   margin-top: 2.5rem;
   z-index: 0;
